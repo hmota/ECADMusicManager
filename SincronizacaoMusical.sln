@@ -1,0 +1,188 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.UI", "Sincronizacao.UI\SincronizacaoMusical.UI.csproj", "{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.Domain", "Sincronizacao.Domain\SincronizacaoMusical.Domain.csproj", "{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.MigrationDatabase", "Sincronizacao.MigrationDatabase\SincronizacaoMusical.MigrationDatabase.csproj", "{0647CC6C-2596-4DDA-BFAE-48406E1D2703}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Presentation", "1.1 Presentation", "{FA0C02EF-EC30-43C1-BCAA-AE53D3E21C14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1.1 WPF Client", "1.1.1 WPF Client", "{BB9342B2-D6A8-4C6E-AA9A-95D49FF3A59A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Domain", "1.2 Domain", "{BDB99BDD-F1F5-415C-807C-A271C4D49492}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 Infrastructure", "1.3 Infrastructure", "{448763BB-6191-4585-9554-2570180A0044}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Database", "2 Database", "{1C2F5BF8-D03B-4BFE-A100-3E5F207B58D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1 Data", "1.3.1 Data", "{2848F173-2F03-4208-B4FB-EF7F4BAA2085}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 Migration", "2.1 Migration", "{F13F5D4E-B2B2-477E-955F-5D3525B6E87A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Information", "3 Information", "{6660F836-BB80-4F0A-9C70-5F6FD8BBEAAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 Documents", "3.1 Documents", "{2058F29A-9CCA-44D8-ACEE-C5F9F570222B}"
+	ProjectSection(SolutionItems) = preProject
+		Documentos\sinc.png = Documentos\sinc.png
+		Documentos\sincronizacao entidades.png = Documentos\sincronizacao entidades.png
+		Documentos\SincronizaþÒo.bmp = Documentos\SincronizaþÒo.bmp
+		Documentos\WBS Sincronizacao Musical.png = Documentos\WBS Sincronizacao Musical.png
+		Documentos\WBS Sincronização Musical.png = Documentos\WBS Sincronização Musical.png
+		Documentos\WBS Sincronização Musical.wbs = Documentos\WBS Sincronização Musical.wbs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1.1 Geral", "3.1.1 Geral", "{0E6B3151-1772-4B74-BB54-432CE8CE06D9}"
+	ProjectSection(SolutionItems) = preProject
+		Documentos\ECAD.xls = Documentos\ECAD.xls
+		Documentos\PLANILHAS  -  RIO PRETO.xlsx = Documentos\PLANILHAS  -  RIO PRETO.xlsx
+		Documentos\SINCMODELO_2012-04-29_12-00.xml = Documentos\SINCMODELO_2012-04-29_12-00.xml
+		Documentos\SINCMODELO_2012-04-30_12-00.xml = Documentos\SINCMODELO_2012-04-30_12-00.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2 Util", "1.3.2 Util", "{E7DA238F-01BC-4BAA-81DD-4288E31F6EB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.Util", "Sincronazacao.Util\SincronizacaoMusical.Util.csproj", "{9E23C6DC-4689-43CF-92A5-FBF9247663A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Setup", "4 Setup", "{5C60D462-B6D8-403A-9BF4-36C55FCA5F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.Infrastructure.Data", "SincronizacaoMusical.Infrastructure.Data\SincronizacaoMusical.Infrastructure.Data.csproj", "{E88A5C50-601F-4989-901B-C3A69D79C73C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLLs", "DLLs", "{D272BC2C-D1D7-4EE1-9480-F8AB8DB41C18}"
+	ProjectSection(SolutionItems) = preProject
+		packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll = packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll
+		packages\EntityFramework.5.0.0\lib\net45\EntityFramework.xml = packages\EntityFramework.5.0.0\lib\net45\EntityFramework.xml
+		packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll = packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll
+		packages\taglib.2.1.0.0\lib\taglib-sharp.dll = packages\taglib.2.1.0.0\lib\taglib-sharp.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Service", "5 Service", "{203D456D-008A-463B-9608-E47E610FF0B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 ImportacaoVetrix", "5.1 ImportacaoVetrix", "{B00CEABF-0D50-455F-94DE-19961725EC1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicoImportacaoVetrix", "ServicoImportacaoVetrix\ServicoImportacaoVetrix.csproj", "{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Debug|x86.ActiveCfg = Debug|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Debug|x86.Build.0 = Debug|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Release|Any CPU.ActiveCfg = Release|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Release|Mixed Platforms.Build.0 = Release|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Release|x86.ActiveCfg = Release|x86
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2}.Release|x86.Build.0 = Release|x86
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|x86.ActiveCfg = Release|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|x86.ActiveCfg = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|x86.ActiveCfg = Release|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E88A5C50-601F-4989-901B-C3A69D79C73C}.Release|x86.ActiveCfg = Release|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF0A8C47-9F32-45DF-96CB-90CD0DD033C2} = {BB9342B2-D6A8-4C6E-AA9A-95D49FF3A59A}
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723} = {BDB99BDD-F1F5-415C-807C-A271C4D49492}
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703} = {F13F5D4E-B2B2-477E-955F-5D3525B6E87A}
+		{BB9342B2-D6A8-4C6E-AA9A-95D49FF3A59A} = {FA0C02EF-EC30-43C1-BCAA-AE53D3E21C14}
+		{2848F173-2F03-4208-B4FB-EF7F4BAA2085} = {448763BB-6191-4585-9554-2570180A0044}
+		{F13F5D4E-B2B2-477E-955F-5D3525B6E87A} = {1C2F5BF8-D03B-4BFE-A100-3E5F207B58D8}
+		{2058F29A-9CCA-44D8-ACEE-C5F9F570222B} = {6660F836-BB80-4F0A-9C70-5F6FD8BBEAAC}
+		{0E6B3151-1772-4B74-BB54-432CE8CE06D9} = {2058F29A-9CCA-44D8-ACEE-C5F9F570222B}
+		{E7DA238F-01BC-4BAA-81DD-4288E31F6EB0} = {448763BB-6191-4585-9554-2570180A0044}
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9} = {E7DA238F-01BC-4BAA-81DD-4288E31F6EB0}
+		{E88A5C50-601F-4989-901B-C3A69D79C73C} = {2848F173-2F03-4208-B4FB-EF7F4BAA2085}
+		{D272BC2C-D1D7-4EE1-9480-F8AB8DB41C18} = {5C60D462-B6D8-403A-9BF4-36C55FCA5F05}
+		{B00CEABF-0D50-455F-94DE-19961725EC1F} = {203D456D-008A-463B-9608-E47E610FF0B5}
+		{05ACAE8A-16D2-436E-8691-CB6BD0BD3032} = {B00CEABF-0D50-455F-94DE-19961725EC1F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://hmota.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sincronazacao.Util\\SincronizacaoMusical.Util.csproj
+		SccProjectTopLevelParentUniqueName1 = SincronizacaoMusical.sln
+		SccProjectName1 = Sincronazacao.Util
+		SccLocalPath1 = Sincronazacao.Util
+		SccProjectUniqueName2 = Sincronizacao.Domain\\SincronizacaoMusical.Domain.csproj
+		SccProjectTopLevelParentUniqueName2 = SincronizacaoMusical.sln
+		SccProjectName2 = Sincronizacao.Domain
+		SccLocalPath2 = Sincronizacao.Domain
+		SccProjectUniqueName3 = Sincronizacao.MigrationDatabase\\SincronizacaoMusical.MigrationDatabase.csproj
+		SccProjectTopLevelParentUniqueName3 = SincronizacaoMusical.sln
+		SccProjectName3 = Sincronizacao.MigrationDatabase
+		SccLocalPath3 = Sincronizacao.MigrationDatabase
+		SccProjectUniqueName4 = Sincronizacao.UI\\SincronizacaoMusical.UI.csproj
+		SccProjectTopLevelParentUniqueName4 = SincronizacaoMusical.sln
+		SccProjectName4 = Sincronizacao.UI
+		SccLocalPath4 = Sincronizacao.UI
+		SccProjectUniqueName5 = SincronizacaoMusical.Infrastructure.Data\\SincronizacaoMusical.Infrastructure.Data.csproj
+		SccProjectTopLevelParentUniqueName5 = SincronizacaoMusical.sln
+		SccProjectName5 = SincronizacaoMusical.Infrastructure.Data
+		SccLocalPath5 = SincronizacaoMusical.Infrastructure.Data
+		SccProjectUniqueName6 = ServicoImportacaoVetrix\\ServicoImportacaoVetrix.csproj
+		SccProjectTopLevelParentUniqueName6 = SincronizacaoMusical.sln
+		SccProjectName6 = ServicoImportacaoVetrix
+		SccLocalPath6 = ServicoImportacaoVetrix
+	EndGlobalSection
+EndGlobal

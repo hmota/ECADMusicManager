@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/IngestService.svc?xsd=xsd1" filename="IngestService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/IngestService.svc?xsd=xsd4" filename="IngestService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://paladio03:99/IngestService.svc?disco" filename="IngestService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/IngestService.svc?xsd=xsd5" filename="IngestService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/IngestService.svc?xsd=xsd3" filename="IngestService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/IngestService.svc?xsd=xsd2" filename="IngestService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://paladio03:99/IngestService.svc?wsdl" filename="IngestService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/IngestService.svc?xsd=xsd0" filename="IngestService4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

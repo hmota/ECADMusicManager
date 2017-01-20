@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sincronizacao.Domain.Entities.Associacao" Collapsed="true">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>Entities\Associacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sincronizacao.Domain.Entities.Autorizacao" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAABAAAAAAgEAIAAAAUAIAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Autorizacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sincronizacao.Domain.Entities.Autor" Collapsed="true">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAIEAAAA=</HashCode>
+      <FileName>Entities\Autor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sincronizacao.Domain.Entities.Musica" Collapsed="true">
+    <Position X="3.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAQAAAACAAAAAAAAAAACAAAAAAwAAAIAAAAMAAABA=</HashCode>
+      <FileName>Entities\Musica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

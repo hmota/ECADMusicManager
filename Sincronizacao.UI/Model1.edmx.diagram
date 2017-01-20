@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a1eba14aecd41c88f31e22d89b99515" Name="Diagram1">
+        <EntityTypeShape EntityType="SincronizacaoHomologacaoModel.Exibicoes" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincronizacaoHomologacaoModel.MusicaSonorizacoes" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincronizacaoHomologacaoModel.Sonorizacoes" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincronizacaoHomologacaoModel.TipoTrilhas" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="SincronizacaoHomologacaoModel.FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SincronizacaoHomologacaoModel.FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

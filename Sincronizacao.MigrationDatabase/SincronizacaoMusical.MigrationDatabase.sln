@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.MigrationDatabase", "SincronizacaoMusical.MigrationDatabase.csproj", "{0647CC6C-2596-4DDA-BFAE-48406E1D2703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.Domain", "..\Sincronizacao.Domain\SincronizacaoMusical.Domain.csproj", "{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizacaoMusical.Util", "..\Sincronazacao.Util\SincronizacaoMusical.Util.csproj", "{9E23C6DC-4689-43CF-92A5-FBF9247663A9}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://talio:8080/tfs/record-desenvolvimento
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SincronizacaoMusical.MigrationDatabase.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\Sincronizacao.Domain\\SincronizacaoMusical.Domain.csproj
+		SccProjectName2 = ../Sincronizacao.Domain
+		SccLocalPath2 = ..\\Sincronizacao.Domain
+		SccProjectUniqueName3 = ..\\Sincronazacao.Util\\SincronizacaoMusical.Util.csproj
+		SccProjectName3 = ../Sincronazacao.Util
+		SccLocalPath3 = ..\\Sincronazacao.Util
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

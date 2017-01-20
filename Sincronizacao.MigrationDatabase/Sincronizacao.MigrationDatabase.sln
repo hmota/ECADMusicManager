@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sincronizacao.MigrationDatabase", "Sincronizacao.MigrationDatabase.csproj", "{0647CC6C-2596-4DDA-BFAE-48406E1D2703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sincronizacao.Domain", "..\Sincronizacao.Domain\Sincronizacao.Domain.csproj", "{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sincronazacao.Util", "..\Sincronazacao.Util\Sincronazacao.Util.csproj", "{9E23C6DC-4689-43CF-92A5-FBF9247663A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0647CC6C-2596-4DDA-BFAE-48406E1D2703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616AB23B-2BDB-49F4-9FBD-7A37A5B86723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E23C6DC-4689-43CF-92A5-FBF9247663A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?xsd=xsd4" filename="SincronizacaoMusicalService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?wsdl" filename="SincronizacaoMusicalService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?xsd=xsd1" filename="SincronizacaoMusicalService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?xsd=xsd5" filename="SincronizacaoMusicalService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?xsd=xsd3" filename="SincronizacaoMusicalService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?disco" filename="SincronizacaoMusicalService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?xsd=xsd0" filename="SincronizacaoMusicalService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://paladio03:99/SincronizacaoMusicalService.svc?xsd=xsd2" filename="SincronizacaoMusicalService4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

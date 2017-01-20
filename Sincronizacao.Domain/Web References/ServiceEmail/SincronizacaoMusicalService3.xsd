@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://paladio03:99/SincronizacaoMusicalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Record.RAP.Domain.Entities" />
+  <xs:element name="SendEmailWithTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Record.RAP.Domain.Entities" minOccurs="0" name="email" nillable="true" type="q1:Email" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Record.RAP.Domain.Entities" minOccurs="0" name="template" nillable="true" type="q2:Template" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmailWithTemplateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmailWithContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Record.RAP.Domain.Entities" minOccurs="0" name="email" nillable="true" type="q3:Email" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Record.RAP.Domain.Entities" minOccurs="0" name="conteudo" nillable="true" type="q4:Conteudo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmailWithContentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActiveUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nomeUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActiveUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Record.RAP.Domain.Entities" minOccurs="0" name="GetActiveUserDetailsResult" nillable="true" type="q5:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInactiveUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nomeUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInactiveUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Record.RAP.Domain.Entities" minOccurs="0" name="GetInactiveUserDetailsResult" nillable="true" type="q6:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0647CC6C-2596-4DDA-BFAE-48406E1D2703}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SincronizacaoMusical.MigrationDatabase</RootNamespace>
+    <AssemblyName>SincronizacaoMusical.MigrationDatabase</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.0.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.0.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.0.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="policy.2.0.taglib-sharp">
+      <HintPath>..\packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.0.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MigraMusica.cs" />
+    <Compile Include="MigraAutorizacao.cs" />
+    <Compile Include="dtproperties.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MigraPreco.cs" />
+    <Compile Include="MigraUsuario.cs" />
+    <Compile Include="MigraQuadro.cs" />
+    <Compile Include="MigraTipoTrilha.cs" />
+    <Compile Include="MigraSincronizacao.cs" />
+    <Compile Include="MigraUnidade.cs" />
+    <Compile Include="MigraAutorInterprete.cs" />
+    <Compile Include="MigraPrograma.cs" />
+    <Compile Include="MigraGeneroClassificacao.cs" />
+    <Compile Include="MigraClassificacao.cs" />
+    <Compile Include="MigraGenero.cs" />
+    <Compile Include="MigraTipoExibicao.cs" />
+    <Compile Include="ITransferencia.cs" />
+    <Compile Include="MigraEditora.cs" />
+    <Compile Include="MigraAssociacao.cs" />
+    <Compile Include="EdmSincronizacaoOld.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdmSincronizacaoOld.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmSincronizacaoOld.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmSincronizacaoOld.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdmSincronizacaoOld.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTPREC.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transferencia.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SincClassificacao.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SincGenero.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SincGeneroClassificacao.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTASSO.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTAUTO.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTEDIT.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTEXIB.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTISRC.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTMUSI.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTPCGE.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTPRCL.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTPROD.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTSINC.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTSIQD.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTSLOG.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTTREC.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTTRIB.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTUNID.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINCTWFNC.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+    <Compile Include="trilhas_vetrix.cs">
+      <DependentUpon>EdmSincronizacaoOld.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="EdmSincronizacaoOld.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EdmSincronizacaoOld.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EdmSincronizacaoOld.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EdmSincronizacaoOld.edmx</DependentUpon>
+      <LastGenOutput>EdmSincronizacaoOld.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EdmSincronizacaoOld.edmx.diagram">
+      <DependentUpon>EdmSincronizacaoOld.edmx</DependentUpon>
+    </None>
+    <None Include="EdmSincronizacaoOld.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EdmSincronizacaoOld.edmx</DependentUpon>
+      <LastGenOutput>EdmSincronizacaoOld.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SincronizacaoMusical.MigrationDatabase.SincronizacaoSharepoint.SincronizacaoMusicalDataContext.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sincronazacao.Util\SincronizacaoMusical.Util.csproj">
+      <Project>{9e23c6dc-4689-43cf-92a5-fbf9247663a9}</Project>
+      <Name>SincronizacaoMusical.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sincronizacao.Domain\SincronizacaoMusical.Domain.csproj">
+      <Project>{616ab23b-2bdb-49f4-9fbd-7a37a5b86723}</Project>
+      <Name>SincronizacaoMusical.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

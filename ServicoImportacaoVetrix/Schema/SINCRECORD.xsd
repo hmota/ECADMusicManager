@@ -1,0 +1,36 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SINCRECORD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PRACA" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRILHA" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="PROGRAMA"/>
+                    <xs:element type="xs:string" name="DATA_EXIBICAO"/>
+                    <xs:element type="xs:time" name="DURACAO"/>
+                    <xs:element type="xs:string" name="TRILHA"/>
+                    <xs:element type="xs:string" name="INTERPRETE"/>
+                    <xs:element type="xs:string" name="STATUS"/>
+                    <xs:element type="xs:string" name="ISRC"/>
+                    <xs:element type="xs:string" name="CODIGO_RECORD"/>
+                    <xs:element type="xs:int" name="CODIGO_VETRIX"/>
+                    <xs:element type="xs:string" name="CODIGO_ALBUM"/>
+                    <xs:element type="xs:string" name="ALBUM"/>
+                    <xs:element type="xs:string" name="AOVIVO"/>
+                    <xs:element type="xs:string" name="AUTOR"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="EXIBIDORA" use="optional"/>
+            <xs:attribute type="xs:string" name="RAZAOSOCIAL" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:date" name="DATA_ROTEIRO"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

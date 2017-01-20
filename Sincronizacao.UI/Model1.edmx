@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SincronizacaoHomologacaoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SincronizacaoHomologacaoModelStoreContainer">
+          <EntitySet Name="Exibicoes" EntityType="SincronizacaoHomologacaoModel.Store.Exibicoes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MusicaSonorizacoes" EntityType="SincronizacaoHomologacaoModel.Store.MusicaSonorizacoes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sonorizacoes" EntityType="SincronizacaoHomologacaoModel.Store.Sonorizacoes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoTrilhas" EntityType="SincronizacaoHomologacaoModel.Store.TipoTrilhas" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID" Association="SincronizacaoHomologacaoModel.Store.FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID">
+            <End Role="Sonorizacoes" EntitySet="Sonorizacoes" />
+            <End Role="MusicaSonorizacoes" EntitySet="MusicaSonorizacoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID" Association="SincronizacaoHomologacaoModel.Store.FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID">
+            <End Role="Exibicoes" EntitySet="Exibicoes" />
+            <End Role="Sonorizacoes" EntitySet="Sonorizacoes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Exibicoes">
+          <Key>
+            <PropertyRef Name="ExibicaoID" />
+          </Key>
+          <Property Name="ExibicaoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProgramaID" Type="int" Nullable="false" />
+          <Property Name="UnidadeID" Type="int" Nullable="false" />
+          <Property Name="Data" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MusicaSonorizacoes">
+          <Key>
+            <PropertyRef Name="MusicaSonorizacaoID" />
+          </Key>
+          <Property Name="MusicaSonorizacaoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SonorizacaoID" Type="int" Nullable="false" />
+          <Property Name="MusicaID" Type="int" Nullable="false" />
+          <Property Name="ClassificacaoID" Type="int" Nullable="false" />
+          <Property Name="Execucao" Type="nvarchar(max)" />
+          <Property Name="Minutagem" Type="nvarchar(max)" />
+          <Property Name="Alterada" Type="bit" Nullable="false" />
+          <Property Name="TipoExibicaoID" Type="int" Nullable="false" />
+          <Property Name="QuadroID" Type="int" Nullable="false" />
+          <Property Name="ImportacaoID" Type="int" Nullable="false" />
+          <Property Name="EditoraID" Type="int" Nullable="false" />
+          <Property Name="GravadoraID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sonorizacoes">
+          <Key>
+            <PropertyRef Name="SonorizacaoID" />
+          </Key>
+          <Property Name="SonorizacaoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExibicaoID" Type="int" Nullable="false" />
+          <Property Name="UsuarioID" Type="int" Nullable="false" />
+          <Property Name="Observacao" Type="nvarchar(max)" />
+          <Property Name="PreAprovado" Type="bit" Nullable="false" />
+          <Property Name="Aprovado" Type="bit" Nullable="false" />
+          <Property Name="Aberto" Type="bit" Nullable="false" />
+          <Property Name="AprovadoEm" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoTrilhas">
+          <Key>
+            <PropertyRef Name="TipoTrilhaID" />
+          </Key>
+          <Property Name="TipoTrilhaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID">
+          <End Role="Sonorizacoes" Type="SincronizacaoHomologacaoModel.Store.Sonorizacoes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MusicaSonorizacoes" Type="SincronizacaoHomologacaoModel.Store.MusicaSonorizacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sonorizacoes">
+              <PropertyRef Name="SonorizacaoID" />
+            </Principal>
+            <Dependent Role="MusicaSonorizacoes">
+              <PropertyRef Name="SonorizacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID">
+          <End Role="Exibicoes" Type="SincronizacaoHomologacaoModel.Store.Exibicoes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Sonorizacoes" Type="SincronizacaoHomologacaoModel.Store.Sonorizacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Exibicoes">
+              <PropertyRef Name="ExibicaoID" />
+            </Principal>
+            <Dependent Role="Sonorizacoes">
+              <PropertyRef Name="ExibicaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SincronizacaoHomologacaoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SincronizacaoHomologacaoEntitiesReportTest" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Exibicoes" EntityType="SincronizacaoHomologacaoModel.Exibicoes" />
+          <EntitySet Name="MusicaSonorizacoes" EntityType="SincronizacaoHomologacaoModel.MusicaSonorizacoes" />
+          <EntitySet Name="Sonorizacoes" EntityType="SincronizacaoHomologacaoModel.Sonorizacoes" />
+          <EntitySet Name="TipoTrilhas" EntityType="SincronizacaoHomologacaoModel.TipoTrilhas" />
+          <AssociationSet Name="FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID" Association="SincronizacaoHomologacaoModel.FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID">
+            <End Role="Exibicoes" EntitySet="Exibicoes" />
+            <End Role="Sonorizacoes" EntitySet="Sonorizacoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID" Association="SincronizacaoHomologacaoModel.FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID">
+            <End Role="Sonorizacoes" EntitySet="Sonorizacoes" />
+            <End Role="MusicaSonorizacoes" EntitySet="MusicaSonorizacoes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Exibicoes">
+          <Key>
+            <PropertyRef Name="ExibicaoID" />
+          </Key>
+          <Property Name="ExibicaoID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProgramaID" Type="Int32" Nullable="false" />
+          <Property Name="UnidadeID" Type="Int32" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Sonorizacoes" Relationship="SincronizacaoHomologacaoModel.FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID" FromRole="Exibicoes" ToRole="Sonorizacoes" />
+        </EntityType>
+        <EntityType Name="MusicaSonorizacoes">
+          <Key>
+            <PropertyRef Name="MusicaSonorizacaoID" />
+          </Key>
+          <Property Name="MusicaSonorizacaoID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SonorizacaoID" Type="Int32" Nullable="false" />
+          <Property Name="MusicaID" Type="Int32" Nullable="false" />
+          <Property Name="ClassificacaoID" Type="Int32" Nullable="false" />
+          <Property Name="Execucao" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Minutagem" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Alterada" Type="Boolean" Nullable="false" />
+          <Property Name="TipoExibicaoID" Type="Int32" Nullable="false" />
+          <Property Name="QuadroID" Type="Int32" Nullable="false" />
+          <Property Name="ImportacaoID" Type="Int32" Nullable="false" />
+          <Property Name="EditoraID" Type="Int32" Nullable="false" />
+          <Property Name="GravadoraID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Sonorizacoes" Relationship="SincronizacaoHomologacaoModel.FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID" FromRole="MusicaSonorizacoes" ToRole="Sonorizacoes" />
+        </EntityType>
+        <EntityType Name="Sonorizacoes">
+          <Key>
+            <PropertyRef Name="SonorizacaoID" />
+          </Key>
+          <Property Name="SonorizacaoID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ExibicaoID" Type="Int32" Nullable="false" />
+          <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+          <Property Name="Observacao" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PreAprovado" Type="Boolean" Nullable="false" />
+          <Property Name="Aprovado" Type="Boolean" Nullable="false" />
+          <Property Name="Aberto" Type="Boolean" Nullable="false" />
+          <Property Name="AprovadoEm" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Exibicoes" Relationship="SincronizacaoHomologacaoModel.FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID" FromRole="Sonorizacoes" ToRole="Exibicoes" />
+          <NavigationProperty Name="MusicaSonorizacoes" Relationship="SincronizacaoHomologacaoModel.FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID" FromRole="Sonorizacoes" ToRole="MusicaSonorizacoes" />
+        </EntityType>
+        <EntityType Name="TipoTrilhas">
+          <Key>
+            <PropertyRef Name="TipoTrilhaID" />
+          </Key>
+          <Property Name="TipoTrilhaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_dbo_Sonorizacoes_dbo_Exibicoes_ExibicaoID">
+          <End Role="Exibicoes" Type="SincronizacaoHomologacaoModel.Exibicoes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Sonorizacoes" Type="SincronizacaoHomologacaoModel.Sonorizacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Exibicoes">
+              <PropertyRef Name="ExibicaoID" />
+            </Principal>
+            <Dependent Role="Sonorizacoes">
+              <PropertyRef Name="ExibicaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_MusicaSonorizacoes_dbo_Sonorizacoes_SonorizacaoID">
+          <End Role="Sonorizacoes" Type="SincronizacaoHomologacaoModel.Sonorizacoes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MusicaSonorizacoes" Type="SincronizacaoHomologacaoModel.MusicaSonorizacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sonorizacoes">
+              <PropertyRef Name="SonorizacaoID" />
+            </Principal>
+            <Dependent Role="MusicaSonorizacoes">
+              <PropertyRef Name="SonorizacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SincronizacaoHomologacaoModelStoreContainer" CdmEntityContainer="SincronizacaoHomologacaoEntitiesReportTest">
+          <EntitySetMapping Name="Exibicoes">
+            <EntityTypeMapping TypeName="SincronizacaoHomologacaoModel.Exibicoes">
+              <MappingFragment StoreEntitySet="Exibicoes">
+                <ScalarProperty Name="ExibicaoID" ColumnName="ExibicaoID" />
+                <ScalarProperty Name="ProgramaID" ColumnName="ProgramaID" />
+                <ScalarProperty Name="UnidadeID" ColumnName="UnidadeID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MusicaSonorizacoes">
+            <EntityTypeMapping TypeName="SincronizacaoHomologacaoModel.MusicaSonorizacoes">
+              <MappingFragment StoreEntitySet="MusicaSonorizacoes">
+                <ScalarProperty Name="MusicaSonorizacaoID" ColumnName="MusicaSonorizacaoID" />
+                <ScalarProperty Name="SonorizacaoID" ColumnName="SonorizacaoID" />
+                <ScalarProperty Name="MusicaID" ColumnName="MusicaID" />
+                <ScalarProperty Name="ClassificacaoID" ColumnName="ClassificacaoID" />
+                <ScalarProperty Name="Execucao" ColumnName="Execucao" />
+                <ScalarProperty Name="Minutagem" ColumnName="Minutagem" />
+                <ScalarProperty Name="Alterada" ColumnName="Alterada" />
+                <ScalarProperty Name="TipoExibicaoID" ColumnName="TipoExibicaoID" />
+                <ScalarProperty Name="QuadroID" ColumnName="QuadroID" />
+                <ScalarProperty Name="ImportacaoID" ColumnName="ImportacaoID" />
+                <ScalarProperty Name="EditoraID" ColumnName="EditoraID" />
+                <ScalarProperty Name="GravadoraID" ColumnName="GravadoraID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sonorizacoes">
+            <EntityTypeMapping TypeName="SincronizacaoHomologacaoModel.Sonorizacoes">
+              <MappingFragment StoreEntitySet="Sonorizacoes">
+                <ScalarProperty Name="SonorizacaoID" ColumnName="SonorizacaoID" />
+                <ScalarProperty Name="ExibicaoID" ColumnName="ExibicaoID" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+                <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+                <ScalarProperty Name="PreAprovado" ColumnName="PreAprovado" />
+                <ScalarProperty Name="Aprovado" ColumnName="Aprovado" />
+                <ScalarProperty Name="Aberto" ColumnName="Aberto" />
+                <ScalarProperty Name="AprovadoEm" ColumnName="AprovadoEm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoTrilhas">
+            <EntityTypeMapping TypeName="SincronizacaoHomologacaoModel.TipoTrilhas">
+              <MappingFragment StoreEntitySet="TipoTrilhas">
+                <ScalarProperty Name="TipoTrilhaID" ColumnName="TipoTrilhaID" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

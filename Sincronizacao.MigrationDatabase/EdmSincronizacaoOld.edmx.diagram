@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="80865d34c5b04c888f8197ba8ff11565" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="SincOldModel.SINCTASSO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SincClassificacao" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTEDIT" Width="1.5" PointX="3.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTEXIB" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SincGeneroClassificacao" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SincGenero" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTISRC" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTMUSI" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTPCGE" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTPRCL" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTPROD" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTSINC" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTSIQD" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTSLOG" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTTREC" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTTRIB" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTUNID" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTWFNC" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.trilhas_vetrix" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SincOldModel.dtproperties" Width="1.5" PointX="4.875" PointY="3.375" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTPREC" Width="1.5" PointX="1.263932426117329" PointY="2.8886320157389305" />
+        <EntityTypeShape EntityType="SincOldModel.SINCTAUTO" Width="1.5" PointX="11.171179683493069" PointY="9.2764040423912952" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SincOldModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2000" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="SincOldModelStoreContainer">
+          <EntitySet Name="dtproperties" EntityType="SincOldModel.Store.dtproperties" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SINCTASSO" EntityType="SincOldModel.Store.SINCTASSO" store:Type="Tables" store:Schema="dbo" store:Name="SINCTASSO" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTASSO].[ASSO_CD_CODIGO] AS [ASSO_CD_CODIGO], 
+      [SINCTASSO].[ASSO_DS_NOME] AS [ASSO_DS_NOME]
+      FROM [dbo].[SINCTASSO] AS [SINCTASSO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTAUTO" EntityType="SincOldModel.Store.SINCTAUTO" store:Type="Tables" store:Schema="dbo" store:Name="SINCTAUTO" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTAUTO].[AUTO_CD_CODIGO] AS [AUTO_CD_CODIGO], 
+      [SINCTAUTO].[AUTO_DT_CRIACAO] AS [AUTO_DT_CRIACAO], 
+      [SINCTAUTO].[USUA_CD_CRIADOR] AS [USUA_CD_CRIADOR], 
+      [SINCTAUTO].[MUSI_CD_CODIGO] AS [MUSI_CD_CODIGO], 
+      [SINCTAUTO].[AUTO_DS_MIME] AS [AUTO_DS_MIME], 
+      [SINCTAUTO].[AUTO_VL_PORCENTAGEM] AS [AUTO_VL_PORCENTAGEM], 
+      [SINCTAUTO].[AUTO_VL_VALOR] AS [AUTO_VL_VALOR], 
+      [SINCTAUTO].[PREC_CD_CODIGO] AS [PREC_CD_CODIGO], 
+      [SINCTAUTO].[AUTO_DT_VENCIMENTO] AS [AUTO_DT_VENCIMENTO], 
+      [SINCTAUTO].[EDIT_CD_CODIGO] AS [EDIT_CD_CODIGO], 
+      [SINCTAUTO].[auto_ds_obs] AS [auto_ds_obs]
+      FROM [dbo].[SINCTAUTO] AS [SINCTAUTO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTCLAS" EntityType="SincOldModel.Store.SINCTCLAS" store:Type="Tables" store:Schema="dbo" store:Name="SINCTCLAS" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTCLAS].[CLAS_CD_CODIGO] AS [CLAS_CD_CODIGO], 
+      [SINCTCLAS].[CLAS_DS_DESCRICAO] AS [CLAS_DS_DESCRICAO]
+      FROM [dbo].[SINCTCLAS] AS [SINCTCLAS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTEDIT" EntityType="SincOldModel.Store.SINCTEDIT" store:Type="Tables" store:Schema="dbo" store:Name="SINCTEDIT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTEDIT].[EDIT_CD_CODIGO] AS [EDIT_CD_CODIGO], 
+      [SINCTEDIT].[EDIT_DS_NOME] AS [EDIT_DS_NOME], 
+      [SINCTEDIT].[EDIT_DS_IDENT] AS [EDIT_DS_IDENT], 
+      [SINCTEDIT].[ASSO_CD_CODIGO] AS [ASSO_CD_CODIGO]
+      FROM [dbo].[SINCTEDIT] AS [SINCTEDIT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTEXIB" EntityType="SincOldModel.Store.SINCTEXIB" store:Type="Tables" store:Schema="dbo" store:Name="SINCTEXIB" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTEXIB].[EXIB_CD_CODIGO] AS [EXIB_CD_CODIGO], 
+      [SINCTEXIB].[EXIB_DS_DESCRICAO] AS [EXIB_DS_DESCRICAO]
+      FROM [dbo].[SINCTEXIB] AS [SINCTEXIB]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTGECL" EntityType="SincOldModel.Store.SINCTGECL" store:Type="Tables" store:Schema="dbo" store:Name="SINCTGECL" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTGECL].[GENE_CD_CODIGO] AS [GENE_CD_CODIGO], 
+      [SINCTGECL].[CLAS_CD_CODIGO] AS [CLAS_CD_CODIGO]
+      FROM [dbo].[SINCTGECL] AS [SINCTGECL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTGENE" EntityType="SincOldModel.Store.SINCTGENE" store:Type="Tables" store:Schema="dbo" store:Name="SINCTGENE" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTGENE].[GENE_CD_CODIGO] AS [GENE_CD_CODIGO], 
+      [SINCTGENE].[GENE_DS_DESCRICAO] AS [GENE_DS_DESCRICAO]
+      FROM [dbo].[SINCTGENE] AS [SINCTGENE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTISRC" EntityType="SincOldModel.Store.SINCTISRC" store:Type="Tables" store:Schema="dbo" store:Name="SINCTISRC" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTISRC].[ISRC_CD_CODIGO] AS [ISRC_CD_CODIGO], 
+      [SINCTISRC].[ISRC_DS_TITULO] AS [ISRC_DS_TITULO], 
+      [SINCTISRC].[ISRC_DS_AUTORES] AS [ISRC_DS_AUTORES], 
+      [SINCTISRC].[ISRC_DS_INTERPRETES] AS [ISRC_DS_INTERPRETES], 
+      [SINCTISRC].[ISRC_DS_IFPI] AS [ISRC_DS_IFPI], 
+      [SINCTISRC].[ISRC_DS_ISWC] AS [ISRC_DS_ISWC], 
+      [SINCTISRC].[ISRC_DS_ISRC] AS [ISRC_DS_ISRC], 
+      [SINCTISRC].[ISRC_DS_GRA] AS [ISRC_DS_GRA], 
+      [SINCTISRC].[ISRC_CD_ECAD] AS [ISRC_CD_ECAD], 
+      [SINCTISRC].[ISRC_FL_ATIVA] AS [ISRC_FL_ATIVA], 
+      [SINCTISRC].[ISRC_DT_CARGA] AS [ISRC_DT_CARGA], 
+      [SINCTISRC].[ISRC_DS_TRACK_TIME] AS [ISRC_DS_TRACK_TIME], 
+      [SINCTISRC].[ISRC_FAIXA] AS [ISRC_FAIXA], 
+      [SINCTISRC].[ISRC_NM_ARQUIVO] AS [ISRC_NM_ARQUIVO]
+      FROM [dbo].[SINCTISRC] AS [SINCTISRC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTMUSI" EntityType="SincOldModel.Store.SINCTMUSI" store:Type="Tables" store:Schema="dbo" store:Name="SINCTMUSI" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTMUSI].[MUSI_CD_CODIGO] AS [MUSI_CD_CODIGO], 
+      [SINCTMUSI].[SIQD_CD_CODIGO] AS [SIQD_CD_CODIGO], 
+      [SINCTMUSI].[CLAS_CD_CODIGO] AS [CLAS_CD_CODIGO], 
+      [SINCTMUSI].[ISRC_CD_CODIGO] AS [ISRC_CD_CODIGO], 
+      [SINCTMUSI].[MUSI_HR_MINUTAGEM] AS [MUSI_HR_MINUTAGEM], 
+      [SINCTMUSI].[MUSI_HR_TIMECODE_INICIAL] AS [MUSI_HR_TIMECODE_INICIAL], 
+      [SINCTMUSI].[MUSI_HR_TIMECODE_FINAL] AS [MUSI_HR_TIMECODE_FINAL], 
+      [SINCTMUSI].[MUSI_FL_BAIXA] AS [MUSI_FL_BAIXA], 
+      [SINCTMUSI].[MUSI_DT_BAIXA] AS [MUSI_DT_BAIXA], 
+      [SINCTMUSI].[TRIB_CD_CODIGO] AS [TRIB_CD_CODIGO], 
+      [SINCTMUSI].[MUSI_PC_BAIXA] AS [MUSI_PC_BAIXA], 
+      [SINCTMUSI].[TREC_CD_CODIGO] AS [TREC_CD_CODIGO], 
+      [SINCTMUSI].[MUSI_FL_INCIDENTAL] AS [MUSI_FL_INCIDENTAL], 
+      [SINCTMUSI].[MUSI_FL_PPOURRI] AS [MUSI_FL_PPOURRI], 
+      [SINCTMUSI].[LOGIN_USUARIO] AS [LOGIN_USUARIO], 
+      [SINCTMUSI].[DATA_CADASTRO] AS [DATA_CADASTRO]
+      FROM [dbo].[SINCTMUSI] AS [SINCTMUSI]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTPCGE" EntityType="SincOldModel.Store.SINCTPCGE" store:Type="Tables" store:Schema="dbo" store:Name="SINCTPCGE" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTPCGE].[PCGE_CD_CODIGO] AS [PCGE_CD_CODIGO], 
+      [SINCTPCGE].[PRCL_CD_CODIGO] AS [PRCL_CD_CODIGO], 
+      [SINCTPCGE].[GENE_CD_CODIGO] AS [GENE_CD_CODIGO]
+      FROM [dbo].[SINCTPCGE] AS [SINCTPCGE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTPRCL" EntityType="SincOldModel.Store.SINCTPRCL" store:Type="Tables" store:Schema="dbo" store:Name="SINCTPRCL" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTPRCL].[PRCL_CD_CODIGO] AS [PRCL_CD_CODIGO], 
+      [SINCTPRCL].[PREC_CD_CODIGO] AS [PREC_CD_CODIGO], 
+      [SINCTPRCL].[CLAS_CD_CODIGO] AS [CLAS_CD_CODIGO], 
+      [SINCTPRCL].[PRCL_VL_VALOR] AS [PRCL_VL_VALOR], 
+      [SINCTPRCL].[PRCL_DS_ABRANGENCIA] AS [PRCL_DS_ABRANGENCIA]
+      FROM [dbo].[SINCTPRCL] AS [SINCTPRCL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTPREC" EntityType="SincOldModel.Store.SINCTPREC" store:Type="Tables" store:Schema="dbo" store:Name="SINCTPREC" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTPREC].[PREC_CD_CODIGO] AS [PREC_CD_CODIGO], 
+      [SINCTPREC].[PREC_DT_VIGENCIA_INICIO] AS [PREC_DT_VIGENCIA_INICIO], 
+      [SINCTPREC].[PREC_DT_VIGENCIA_FIM] AS [PREC_DT_VIGENCIA_FIM], 
+      [SINCTPREC].[PREC_DS_ASSOCIACAO] AS [PREC_DS_ASSOCIACAO], 
+      [SINCTPREC].[ASSO_CD_CODIGO] AS [ASSO_CD_CODIGO]
+      FROM [dbo].[SINCTPREC] AS [SINCTPREC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTPROD" EntityType="SincOldModel.Store.SINCTPROD" store:Type="Tables" store:Schema="dbo" store:Name="SINCTPROD" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTPROD].[PROD_CD_CODIGO] AS [PROD_CD_CODIGO], 
+      [SINCTPROD].[GENE_CD_CODIGO] AS [GENE_CD_CODIGO], 
+      [SINCTPROD].[PROD_DS_NOME] AS [PROD_DS_NOME], 
+      [SINCTPROD].[PROD_DS_ORDEM] AS [PROD_DS_ORDEM], 
+      [SINCTPROD].[PROD_FL_ATIVO] AS [PROD_FL_ATIVO], 
+      [SINCTPROD].[PROD_DS_ORDEM_INATIVO] AS [PROD_DS_ORDEM_INATIVO]
+      FROM [dbo].[SINCTPROD] AS [SINCTPROD]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTSINC" EntityType="SincOldModel.Store.SINCTSINC" store:Type="Tables" store:Schema="dbo" store:Name="SINCTSINC" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTSINC].[SINC_CD_CODIGO] AS [SINC_CD_CODIGO], 
+      [SINCTSINC].[UNID_CD_CODIGO] AS [UNID_CD_CODIGO], 
+      [SINCTSINC].[PROD_CD_CODIGO] AS [PROD_CD_CODIGO], 
+      [SINCTSINC].[SINC_DT_CRIACAO] AS [SINC_DT_CRIACAO], 
+      [SINCTSINC].[SINC_DT_GRAVACAO] AS [SINC_DT_GRAVACAO], 
+      [SINCTSINC].[SINC_DT_EXIBICAO] AS [SINC_DT_EXIBICAO], 
+      [SINCTSINC].[SINC_CD_RESPONSAVEL] AS [SINC_CD_RESPONSAVEL], 
+      [SINCTSINC].[SINC_CD_SONOPLASTA] AS [SINC_CD_SONOPLASTA], 
+      [SINCTSINC].[SINC_CD_USUA_CRIACAO] AS [SINC_CD_USUA_CRIACAO], 
+      [SINCTSINC].[SINC_DS_OBS] AS [SINC_DS_OBS], 
+      [SINCTSINC].[SINC_DT_AP_SONOPLASTA] AS [SINC_DT_AP_SONOPLASTA], 
+      [SINCTSINC].[SINC_DT_AP_RESPONSAVEL] AS [SINC_DT_AP_RESPONSAVEL], 
+      [SINCTSINC].[SINC_DT_AP_ADMIN] AS [SINC_DT_AP_ADMIN], 
+      [SINCTSINC].[sinc_cd_admin] AS [sinc_cd_admin], 
+      [SINCTSINC].[sinc_cd_tipo_criador] AS [sinc_cd_tipo_criador], 
+      [SINCTSINC].[WFNC_CD_CODIGO_SONOPLASTA] AS [WFNC_CD_CODIGO_SONOPLASTA], 
+      [SINCTSINC].[WFNC_CD_CODIGO_PRODUCAO] AS [WFNC_CD_CODIGO_PRODUCAO], 
+      [SINCTSINC].[WFNC_CD_CODIGO_ADMINISTRACAO] AS [WFNC_CD_CODIGO_ADMINISTRACAO], 
+      [SINCTSINC].[WFNC_CD_ETAPA_ULTIMA] AS [WFNC_CD_ETAPA_ULTIMA]
+      FROM [dbo].[SINCTSINC] AS [SINCTSINC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTSIQD" EntityType="SincOldModel.Store.SINCTSIQD" store:Type="Tables" store:Schema="dbo" store:Name="SINCTSIQD" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTSIQD].[SIQD_CD_CODIGO] AS [SIQD_CD_CODIGO], 
+      [SINCTSIQD].[QUAD_CD_CODIGO] AS [QUAD_CD_CODIGO], 
+      [SINCTSIQD].[SINC_CD_CODIGO] AS [SINC_CD_CODIGO], 
+      [SINCTSIQD].[EXIB_CD_CODIGO] AS [EXIB_CD_CODIGO], 
+      [SINCTSIQD].[SIQD_DS_TITULO] AS [SIQD_DS_TITULO], 
+      [SINCTSIQD].[SIQD_DS_DESCRICAO] AS [SIQD_DS_DESCRICAO], 
+      [SINCTSIQD].[SIQD_CD_CODIGO_REPR] AS [SIQD_CD_CODIGO_REPR], 
+      [SINCTSIQD].[SIQD_DS_REPR] AS [SIQD_DS_REPR]
+      FROM [dbo].[SINCTSIQD] AS [SINCTSIQD]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTSLOG" EntityType="SincOldModel.Store.SINCTSLOG" store:Type="Tables" store:Schema="dbo" store:Name="SINCTSLOG" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTSLOG].[SLOG_CD_CODIGO] AS [SLOG_CD_CODIGO], 
+      [SINCTSLOG].[SLOG_DS_COMANDO] AS [SLOG_DS_COMANDO], 
+      [SINCTSLOG].[SLOG_DS_DESCRICAO] AS [SLOG_DS_DESCRICAO], 
+      [SINCTSLOG].[USUA_CD_CODIGO] AS [USUA_CD_CODIGO], 
+      [SINCTSLOG].[SLOG_DT_DATA] AS [SLOG_DT_DATA], 
+      [SINCTSLOG].[SLOG_DS_DESCRICAOINICIAL] AS [SLOG_DS_DESCRICAOINICIAL]
+      FROM [dbo].[SINCTSLOG] AS [SINCTSLOG]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTTREC" EntityType="SincOldModel.Store.SINCTTREC" store:Type="Tables" store:Schema="dbo" store:Name="SINCTTREC" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTTREC].[TREC_CD_CODIGO] AS [TREC_CD_CODIGO], 
+      [SINCTTREC].[TREC_DS_TITULO] AS [TREC_DS_TITULO], 
+      [SINCTTREC].[TREC_DS_AUTOR] AS [TREC_DS_AUTOR], 
+      [SINCTTREC].[TREC_DS_INTERPRETES] AS [TREC_DS_INTERPRETES], 
+      [SINCTTREC].[TREC_DS_ISRC] AS [TREC_DS_ISRC], 
+      [SINCTTREC].[TREC_DS_TRACK_TIME] AS [TREC_DS_TRACK_TIME], 
+      [SINCTTREC].[TREC_DS_GENERO] AS [TREC_DS_GENERO], 
+      [SINCTTREC].[TREC_DS_TRACK] AS [TREC_DS_TRACK], 
+      [SINCTTREC].[TREC_NM_ARQUIVO] AS [TREC_NM_ARQUIVO]
+      FROM [dbo].[SINCTTREC] AS [SINCTTREC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTTRIB" EntityType="SincOldModel.Store.SINCTTRIB" store:Type="Tables" store:Schema="dbo" store:Name="SINCTTRIB" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTTRIB].[TRIB_CD_CODIGO] AS [TRIB_CD_CODIGO], 
+      [SINCTTRIB].[TRIB_DS_TITULO] AS [TRIB_DS_TITULO], 
+      [SINCTTRIB].[TRIB_DS_AUTOR] AS [TRIB_DS_AUTOR], 
+      [SINCTTRIB].[TRIB_DS_INTERPRETES] AS [TRIB_DS_INTERPRETES], 
+      [SINCTTRIB].[TRIB_CD_DISCOTECA] AS [TRIB_CD_DISCOTECA], 
+      [SINCTTRIB].[TRIB_CD_CD_TRILHA] AS [TRIB_CD_CD_TRILHA], 
+      [SINCTTRIB].[TRIB_DS_CD_TITLE] AS [TRIB_DS_CD_TITLE], 
+      [SINCTTRIB].[TRIB_NR_TRACK] AS [TRIB_NR_TRACK], 
+      [SINCTTRIB].[TRIB_CD_TRILHA] AS [TRIB_CD_TRILHA], 
+      [SINCTTRIB].[TRIB_DS_TRACK_TIME] AS [TRIB_DS_TRACK_TIME], 
+      [SINCTTRIB].[TRIB_DS_TRILHA] AS [TRIB_DS_TRILHA], 
+      [SINCTTRIB].[TRIB_NM_ARQUIVO] AS [TRIB_NM_ARQUIVO]
+      FROM [dbo].[SINCTTRIB] AS [SINCTTRIB]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTUNID" EntityType="SincOldModel.Store.SINCTUNID" store:Type="Tables" store:Schema="dbo" store:Name="SINCTUNID" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTUNID].[UNID_CD_CODIGO] AS [UNID_CD_CODIGO], 
+      [SINCTUNID].[UNID_DS_NOME] AS [UNID_DS_NOME], 
+      [SINCTUNID].[UNID_CD_TIPO] AS [UNID_CD_TIPO], 
+      [SINCTUNID].[UNID_DS_UF] AS [UNID_DS_UF], 
+      [SINCTUNID].[UNID_DS_CIDADE] AS [UNID_DS_CIDADE], 
+      [SINCTUNID].[UNID_DS_DESCRICAO] AS [UNID_DS_DESCRICAO], 
+      [SINCTUNID].[UNID_DS_CNPJ] AS [UNID_DS_CNPJ], 
+      [SINCTUNID].[UNID_DS_LOGRADOURO] AS [UNID_DS_LOGRADOURO], 
+      [SINCTUNID].[UNID_DS_CEP] AS [UNID_DS_CEP], 
+      [SINCTUNID].[UNID_DS_CONTATO] AS [UNID_DS_CONTATO], 
+      [SINCTUNID].[UNID_DS_RAZAO] AS [UNID_DS_RAZAO]
+      FROM [dbo].[SINCTUNID] AS [SINCTUNID]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SINCTWFNC" EntityType="SincOldModel.Store.SINCTWFNC" store:Type="Tables" store:Schema="dbo" store:Name="SINCTWFNC" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [SINCTWFNC].[WFNC_CD_CODIGO] AS [WFNC_CD_CODIGO], 
+      [SINCTWFNC].[SINC_CD_CODIGO] AS [SINC_CD_CODIGO], 
+      [SINCTWFNC].[WFNC_CD_ETAPA] AS [WFNC_CD_ETAPA], 
+      [SINCTWFNC].[USUA_CD_USUARIO] AS [USUA_CD_USUARIO], 
+      [SINCTWFNC].[WFNC_CD_WF] AS [WFNC_CD_WF], 
+      [SINCTWFNC].[WFNC_DT_DATA] AS [WFNC_DT_DATA], 
+      [SINCTWFNC].[WFNC_DS_DESCRICAO] AS [WFNC_DS_DESCRICAO]
+      FROM [dbo].[SINCTWFNC] AS [SINCTWFNC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="trilhas_vetrix" EntityType="SincOldModel.Store.trilhas_vetrix" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+        </EntityContainer>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="objectid" Type="int" />
+          <Property Name="property" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="value" Type="varchar" MaxLength="255" />
+          <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+          <Property Name="lvalue" Type="image" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTASSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTASSO">
+          <Key>
+            <PropertyRef Name="ASSO_CD_CODIGO" />
+          </Key>
+          <Property Name="ASSO_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ASSO_DS_NOME" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTAUTO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTAUTO">
+          <Key>
+            <PropertyRef Name="AUTO_CD_CODIGO" />
+            <PropertyRef Name="USUA_CD_CRIADOR" />
+          </Key>
+          <Property Name="AUTO_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AUTO_DT_CRIACAO" Type="datetime" />
+          <Property Name="USUA_CD_CRIADOR" Type="int" Nullable="false" />
+          <Property Name="MUSI_CD_CODIGO" Type="int" />
+          <Property Name="AUTO_DS_MIME" Type="varchar" MaxLength="50" />
+          <Property Name="AUTO_VL_PORCENTAGEM" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="AUTO_VL_VALOR" Type="numeric" Scale="2" />
+          <Property Name="PREC_CD_CODIGO" Type="int" />
+          <Property Name="AUTO_DT_VENCIMENTO" Type="datetime" />
+          <Property Name="EDIT_CD_CODIGO" Type="int" />
+          <Property Name="auto_ds_obs" Type="text" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTCLAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTCLAS">
+          <Key>
+            <PropertyRef Name="CLAS_CD_CODIGO" />
+            <PropertyRef Name="CLAS_DS_DESCRICAO" />
+          </Key>
+          <Property Name="CLAS_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLAS_DS_DESCRICAO" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTEDIT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTEDIT">
+          <Key>
+            <PropertyRef Name="EDIT_CD_CODIGO" />
+            <PropertyRef Name="EDIT_DS_NOME" />
+            <PropertyRef Name="EDIT_DS_IDENT" />
+          </Key>
+          <Property Name="EDIT_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EDIT_DS_NOME" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="EDIT_DS_IDENT" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ASSO_CD_CODIGO" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTEXIB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTEXIB">
+          <Key>
+            <PropertyRef Name="EXIB_CD_CODIGO" />
+            <PropertyRef Name="EXIB_DS_DESCRICAO" />
+          </Key>
+          <Property Name="EXIB_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EXIB_DS_DESCRICAO" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTGECL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTGECL">
+          <Key>
+            <PropertyRef Name="GENE_CD_CODIGO" />
+            <PropertyRef Name="CLAS_CD_CODIGO" />
+          </Key>
+          <Property Name="GENE_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CLAS_CD_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTGENE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTGENE">
+          <Key>
+            <PropertyRef Name="GENE_CD_CODIGO" />
+            <PropertyRef Name="GENE_DS_DESCRICAO" />
+          </Key>
+          <Property Name="GENE_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GENE_DS_DESCRICAO" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTISRC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTISRC">
+          <Key>
+            <PropertyRef Name="ISRC_CD_CODIGO" />
+            <PropertyRef Name="ISRC_DS_TITULO" />
+            <PropertyRef Name="ISRC_DS_ISRC" />
+          </Key>
+          <Property Name="ISRC_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ISRC_DS_TITULO" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ISRC_DS_AUTORES" Type="varchar" MaxLength="200" />
+          <Property Name="ISRC_DS_INTERPRETES" Type="varchar" MaxLength="200" />
+          <Property Name="ISRC_DS_IFPI" Type="varchar" MaxLength="200" />
+          <Property Name="ISRC_DS_ISWC" Type="varchar" MaxLength="200" />
+          <Property Name="ISRC_DS_ISRC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ISRC_DS_GRA" Type="varchar" MaxLength="200" />
+          <Property Name="ISRC_CD_ECAD" Type="float" />
+          <Property Name="ISRC_FL_ATIVA" Type="bit" />
+          <Property Name="ISRC_DT_CARGA" Type="datetime" />
+          <Property Name="ISRC_DS_TRACK_TIME" Type="varchar" MaxLength="8" />
+          <Property Name="ISRC_FAIXA" Type="numeric" />
+          <Property Name="ISRC_NM_ARQUIVO" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTMUSI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTMUSI">
+          <Key>
+            <PropertyRef Name="MUSI_CD_CODIGO" />
+            <PropertyRef Name="SIQD_CD_CODIGO" />
+            <PropertyRef Name="CLAS_CD_CODIGO" />
+          </Key>
+          <Property Name="MUSI_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SIQD_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CLAS_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="ISRC_CD_CODIGO" Type="int" />
+          <Property Name="MUSI_HR_MINUTAGEM" Type="varchar" MaxLength="5" />
+          <Property Name="MUSI_HR_TIMECODE_INICIAL" Type="datetime" />
+          <Property Name="MUSI_HR_TIMECODE_FINAL" Type="datetime" />
+          <Property Name="MUSI_FL_BAIXA" Type="bit" />
+          <Property Name="MUSI_DT_BAIXA" Type="datetime" />
+          <Property Name="TRIB_CD_CODIGO" Type="int" />
+          <Property Name="MUSI_PC_BAIXA" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="TREC_CD_CODIGO" Type="int" />
+          <Property Name="MUSI_FL_INCIDENTAL" Type="bit" />
+          <Property Name="MUSI_FL_PPOURRI" Type="bit" />
+          <Property Name="LOGIN_USUARIO" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATA_CADASTRO" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTPCGE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTPCGE">
+          <Key>
+            <PropertyRef Name="PCGE_CD_CODIGO" />
+            <PropertyRef Name="PRCL_CD_CODIGO" />
+            <PropertyRef Name="GENE_CD_CODIGO" />
+          </Key>
+          <Property Name="PCGE_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PRCL_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="GENE_CD_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTPRCL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTPRCL">
+          <Key>
+            <PropertyRef Name="PRCL_CD_CODIGO" />
+            <PropertyRef Name="PREC_CD_CODIGO" />
+            <PropertyRef Name="PRCL_VL_VALOR" />
+          </Key>
+          <Property Name="PRCL_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PREC_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CLAS_CD_CODIGO" Type="int" />
+          <Property Name="PRCL_VL_VALOR" Type="numeric" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="PRCL_DS_ABRANGENCIA" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTPREC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTPREC">
+          <Key>
+            <PropertyRef Name="PREC_CD_CODIGO" />
+            <PropertyRef Name="PREC_DT_VIGENCIA_INICIO" />
+            <PropertyRef Name="PREC_DT_VIGENCIA_FIM" />
+            <PropertyRef Name="PREC_DS_ASSOCIACAO" />
+          </Key>
+          <Property Name="PREC_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PREC_DT_VIGENCIA_INICIO" Type="datetime" Nullable="false" />
+          <Property Name="PREC_DT_VIGENCIA_FIM" Type="datetime" Nullable="false" />
+          <Property Name="PREC_DS_ASSOCIACAO" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ASSO_CD_CODIGO" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTPROD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTPROD">
+          <Key>
+            <PropertyRef Name="PROD_CD_CODIGO" />
+            <PropertyRef Name="PROD_DS_NOME" />
+            <PropertyRef Name="PROD_DS_ORDEM" />
+            <PropertyRef Name="PROD_DS_ORDEM_INATIVO" />
+          </Key>
+          <Property Name="PROD_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GENE_CD_CODIGO" Type="int" />
+          <Property Name="PROD_DS_NOME" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PROD_DS_ORDEM" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="PROD_FL_ATIVO" Type="bit" />
+          <Property Name="PROD_DS_ORDEM_INATIVO" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTSINC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTSINC">
+          <Key>
+            <PropertyRef Name="SINC_CD_CODIGO" />
+            <PropertyRef Name="UNID_CD_CODIGO" />
+            <PropertyRef Name="PROD_CD_CODIGO" />
+            <PropertyRef Name="SINC_CD_USUA_CRIACAO" />
+          </Key>
+          <Property Name="SINC_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UNID_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="PROD_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="SINC_DT_CRIACAO" Type="datetime" />
+          <Property Name="SINC_DT_GRAVACAO" Type="datetime" />
+          <Property Name="SINC_DT_EXIBICAO" Type="datetime" />
+          <Property Name="SINC_CD_RESPONSAVEL" Type="int" />
+          <Property Name="SINC_CD_SONOPLASTA" Type="int" />
+          <Property Name="SINC_CD_USUA_CRIACAO" Type="int" Nullable="false" />
+          <Property Name="SINC_DS_OBS" Type="text" />
+          <Property Name="SINC_DT_AP_SONOPLASTA" Type="datetime" />
+          <Property Name="SINC_DT_AP_RESPONSAVEL" Type="datetime" />
+          <Property Name="SINC_DT_AP_ADMIN" Type="datetime" />
+          <Property Name="sinc_cd_admin" Type="int" />
+          <Property Name="sinc_cd_tipo_criador" Type="int" />
+          <Property Name="WFNC_CD_CODIGO_SONOPLASTA" Type="int" />
+          <Property Name="WFNC_CD_CODIGO_PRODUCAO" Type="int" />
+          <Property Name="WFNC_CD_CODIGO_ADMINISTRACAO" Type="int" />
+          <Property Name="WFNC_CD_ETAPA_ULTIMA" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTSIQD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTSIQD">
+          <Key>
+            <PropertyRef Name="SIQD_CD_CODIGO" />
+            <PropertyRef Name="QUAD_CD_CODIGO" />
+            <PropertyRef Name="SINC_CD_CODIGO" />
+          </Key>
+          <Property Name="SIQD_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QUAD_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="SINC_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="EXIB_CD_CODIGO" Type="int" />
+          <Property Name="SIQD_DS_TITULO" Type="varchar" MaxLength="200" />
+          <Property Name="SIQD_DS_DESCRICAO" Type="text" />
+          <Property Name="SIQD_CD_CODIGO_REPR" Type="int" />
+          <Property Name="SIQD_DS_REPR" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTSLOG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTSLOG">
+          <Key>
+            <PropertyRef Name="SLOG_CD_CODIGO" />
+          </Key>
+          <Property Name="SLOG_CD_CODIGO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SLOG_DS_COMANDO" Type="varchar" MaxLength="30" />
+          <Property Name="SLOG_DS_DESCRICAO" Type="varchar" />
+          <Property Name="USUA_CD_CODIGO" Type="int" />
+          <Property Name="SLOG_DT_DATA" Type="datetime" />
+          <Property Name="SLOG_DS_DESCRICAOINICIAL" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTTREC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTTREC">
+          <Key>
+            <PropertyRef Name="TREC_CD_CODIGO" />
+          </Key>
+          <Property Name="TREC_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TREC_DS_TITULO" Type="varchar" MaxLength="200" />
+          <Property Name="TREC_DS_AUTOR" Type="varchar" MaxLength="200" />
+          <Property Name="TREC_DS_INTERPRETES" Type="varchar" MaxLength="200" />
+          <Property Name="TREC_DS_ISRC" Type="varchar" MaxLength="50" />
+          <Property Name="TREC_DS_TRACK_TIME" Type="varchar" MaxLength="8" />
+          <Property Name="TREC_DS_GENERO" Type="varchar" MaxLength="50" />
+          <Property Name="TREC_DS_TRACK" Type="numeric" />
+          <Property Name="TREC_NM_ARQUIVO" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTTRIB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTTRIB">
+          <Key>
+            <PropertyRef Name="TRIB_CD_CODIGO" />
+          </Key>
+          <Property Name="TRIB_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TRIB_DS_TITULO" Type="varchar" MaxLength="200" />
+          <Property Name="TRIB_DS_AUTOR" Type="varchar" MaxLength="200" />
+          <Property Name="TRIB_DS_INTERPRETES" Type="varchar" MaxLength="200" />
+          <Property Name="TRIB_CD_DISCOTECA" Type="int" />
+          <Property Name="TRIB_CD_CD_TRILHA" Type="varchar" MaxLength="30" />
+          <Property Name="TRIB_DS_CD_TITLE" Type="varchar" MaxLength="200" />
+          <Property Name="TRIB_NR_TRACK" Type="int" />
+          <Property Name="TRIB_CD_TRILHA" Type="varchar" MaxLength="15" />
+          <Property Name="TRIB_DS_TRACK_TIME" Type="varchar" MaxLength="8" />
+          <Property Name="TRIB_DS_TRILHA" Type="varchar" MaxLength="50" />
+          <Property Name="TRIB_NM_ARQUIVO" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTUNID' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTUNID">
+          <Key>
+            <PropertyRef Name="UNID_CD_CODIGO" />
+            <PropertyRef Name="UNID_DS_NOME" />
+          </Key>
+          <Property Name="UNID_CD_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UNID_DS_NOME" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="UNID_CD_TIPO" Type="int" />
+          <Property Name="UNID_DS_UF" Type="varchar" MaxLength="2" />
+          <Property Name="UNID_DS_CIDADE" Type="varchar" MaxLength="200" />
+          <Property Name="UNID_DS_DESCRICAO" Type="varchar" MaxLength="200" />
+          <Property Name="UNID_DS_CNPJ" Type="varchar" MaxLength="15" />
+          <Property Name="UNID_DS_LOGRADOURO" Type="varchar" MaxLength="60" />
+          <Property Name="UNID_DS_CEP" Type="varchar" MaxLength="8" />
+          <Property Name="UNID_DS_CONTATO" Type="varchar" MaxLength="30" />
+          <Property Name="UNID_DS_RAZAO" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Sincronizacao.dbo.SINCTWFNC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SINCTWFNC">
+          <Key>
+            <PropertyRef Name="WFNC_CD_CODIGO" />
+            <PropertyRef Name="SINC_CD_CODIGO" />
+          </Key>
+          <Property Name="WFNC_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="SINC_CD_CODIGO" Type="int" Nullable="false" />
+          <Property Name="WFNC_CD_ETAPA" Type="char" MaxLength="1" />
+          <Property Name="USUA_CD_USUARIO" Type="int" />
+          <Property Name="WFNC_CD_WF" Type="bit" />
+          <Property Name="WFNC_DT_DATA" Type="datetime" />
+          <Property Name="WFNC_DS_DESCRICAO" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="trilhas_vetrix">
+          <Key>
+            <PropertyRef Name="codigo_vetrix" />
+            <PropertyRef Name="exibidora" />
+            <PropertyRef Name="data_exibicao" />
+          </Key>
+          <Property Name="codigo_vetrix" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="data_roteiro" Type="datetime" Nullable="false" />
+          <Property Name="exibidora" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="programa" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="data_exibicao" Type="datetime" Nullable="false" />
+          <Property Name="duracao" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="trilha" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="interprete" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="isrc" Type="varchar" MaxLength="20" />
+          <Property Name="codigo_record" Type="varchar" MaxLength="20" />
+          <Property Name="processado" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="razao_social" Type="varchar" MaxLength="100" />
+          <Property Name="aovivo" Type="char" MaxLength="1" />
+          <Property Name="codigo_album" Type="varchar" MaxLength="50" />
+          <Property Name="album" Type="varchar" MaxLength="200" />
+          <Property Name="log_processado" Type="varchar" MaxLength="300" />
+          <Property Name="data_processado" Type="datetime" />
+          <Property Name="DtInsert" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SincOldModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="SincOldEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="SINCTASSO" EntityType="SincOldModel.SINCTASSO" />
+          <EntitySet Name="SINCTCLAS" EntityType="SincOldModel.SincClassificacao" />
+          <EntitySet Name="SINCTEDIT" EntityType="SincOldModel.SINCTEDIT" />
+          <EntitySet Name="SINCTEXIB" EntityType="SincOldModel.SINCTEXIB" />
+          <EntitySet Name="SINCGECL" EntityType="SincOldModel.SincGeneroClassificacao" />
+          <EntitySet Name="SINCTGENE" EntityType="SincOldModel.SincGenero" />
+          <EntitySet Name="SINCTISRC" EntityType="SincOldModel.SINCTISRC" />
+          <EntitySet Name="SINCTMUSI" EntityType="SincOldModel.SINCTMUSI" />
+          <EntitySet Name="SINCTPCGE" EntityType="SincOldModel.SINCTPCGE" />
+          <EntitySet Name="SINCTPRCL" EntityType="SincOldModel.SINCTPRCL" />
+          <EntitySet Name="SINCTPROD" EntityType="SincOldModel.SINCTPROD" />
+          <EntitySet Name="SINCTSINC" EntityType="SincOldModel.SINCTSINC" />
+          <EntitySet Name="SINCTSIQD" EntityType="SincOldModel.SINCTSIQD" />
+          <EntitySet Name="SINCTSLOG" EntityType="SincOldModel.SINCTSLOG" />
+          <EntitySet Name="SINCTTREC" EntityType="SincOldModel.SINCTTREC" />
+          <EntitySet Name="SINCTTRIB" EntityType="SincOldModel.SINCTTRIB" />
+          <EntitySet Name="SINCTUNID" EntityType="SincOldModel.SINCTUNID" />
+          <EntitySet Name="SINCTWFNC" EntityType="SincOldModel.SINCTWFNC" />
+          <EntitySet Name="trilhas_vetrix" EntityType="SincOldModel.trilhas_vetrix" />
+          <EntitySet Name="dtproperties" EntityType="SincOldModel.dtproperties" />
+          <EntitySet Name="SINCTPREC" EntityType="SincOldModel.SINCTPREC" />
+          <EntitySet Name="SINCTAUTO" EntityType="SincOldModel.SINCTAUTO" />
+        </EntityContainer>
+        <EntityType Name="SINCTASSO">
+          <Key>
+            <PropertyRef Name="ASSO_CD_CODIGO" />
+          </Key>
+          <Property Name="ASSO_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ASSO_DS_NOME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SincClassificacao">
+          <Key>
+            <PropertyRef Name="CLAS_CD_CODIGO" />
+            <PropertyRef Name="CLAS_DS_DESCRICAO" />
+          </Key>
+          <Property Name="CLAS_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CLAS_DS_DESCRICAO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTEDIT">
+          <Key>
+            <PropertyRef Name="EDIT_CD_CODIGO" />
+            <PropertyRef Name="EDIT_DS_NOME" />
+            <PropertyRef Name="EDIT_DS_IDENT" />
+          </Key>
+          <Property Name="EDIT_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="EDIT_DS_NOME" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="EDIT_DS_IDENT" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ASSO_CD_CODIGO" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SINCTEXIB">
+          <Key>
+            <PropertyRef Name="EXIB_CD_CODIGO" />
+            <PropertyRef Name="EXIB_DS_DESCRICAO" />
+          </Key>
+          <Property Name="EXIB_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="EXIB_DS_DESCRICAO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SincGeneroClassificacao">
+          <Key>
+            <PropertyRef Name="GENE_CD_CODIGO" />
+            <PropertyRef Name="CLAS_CD_CODIGO" />
+          </Key>
+          <Property Name="GENE_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CLAS_CD_CODIGO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SincGenero">
+          <Key>
+            <PropertyRef Name="GENE_CD_CODIGO" />
+            <PropertyRef Name="GENE_DS_DESCRICAO" />
+          </Key>
+          <Property Name="GENE_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="GENE_DS_DESCRICAO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTISRC">
+          <Key>
+            <PropertyRef Name="ISRC_CD_CODIGO" />
+            <PropertyRef Name="ISRC_DS_TITULO" />
+            <PropertyRef Name="ISRC_DS_ISRC" />
+          </Key>
+          <Property Name="ISRC_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ISRC_DS_TITULO" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_DS_AUTORES" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_DS_INTERPRETES" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_DS_IFPI" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_DS_ISWC" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_DS_ISRC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_DS_GRA" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_CD_ECAD" Type="Double" />
+          <Property Name="ISRC_FL_ATIVA" Type="Boolean" />
+          <Property Name="ISRC_DT_CARGA" Type="DateTime" Precision="3" />
+          <Property Name="ISRC_DS_TRACK_TIME" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="ISRC_FAIXA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ISRC_NM_ARQUIVO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTMUSI">
+          <Key>
+            <PropertyRef Name="MUSI_CD_CODIGO" />
+            <PropertyRef Name="SIQD_CD_CODIGO" />
+            <PropertyRef Name="CLAS_CD_CODIGO" />
+          </Key>
+          <Property Name="MUSI_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SIQD_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CLAS_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="ISRC_CD_CODIGO" Type="Int32" />
+          <Property Name="MUSI_HR_MINUTAGEM" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="MUSI_HR_TIMECODE_INICIAL" Type="DateTime" Precision="3" />
+          <Property Name="MUSI_HR_TIMECODE_FINAL" Type="DateTime" Precision="3" />
+          <Property Name="MUSI_FL_BAIXA" Type="Boolean" />
+          <Property Name="MUSI_DT_BAIXA" Type="DateTime" Precision="3" />
+          <Property Name="TRIB_CD_CODIGO" Type="Int32" />
+          <Property Name="MUSI_PC_BAIXA" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="TREC_CD_CODIGO" Type="Int32" />
+          <Property Name="MUSI_FL_INCIDENTAL" Type="Boolean" />
+          <Property Name="MUSI_FL_PPOURRI" Type="Boolean" />
+          <Property Name="LOGIN_USUARIO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DATA_CADASTRO" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SINCTPCGE">
+          <Key>
+            <PropertyRef Name="PCGE_CD_CODIGO" />
+            <PropertyRef Name="PRCL_CD_CODIGO" />
+            <PropertyRef Name="GENE_CD_CODIGO" />
+          </Key>
+          <Property Name="PCGE_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PRCL_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="GENE_CD_CODIGO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SINCTPRCL">
+          <Key>
+            <PropertyRef Name="PRCL_CD_CODIGO" />
+            <PropertyRef Name="PREC_CD_CODIGO" />
+            <PropertyRef Name="PRCL_VL_VALOR" />
+          </Key>
+          <Property Name="PRCL_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PREC_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CLAS_CD_CODIGO" Type="Int32" />
+          <Property Name="PRCL_VL_VALOR" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="PRCL_DS_ABRANGENCIA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTPROD">
+          <Key>
+            <PropertyRef Name="PROD_CD_CODIGO" />
+            <PropertyRef Name="PROD_DS_NOME" />
+            <PropertyRef Name="PROD_DS_ORDEM" />
+            <PropertyRef Name="PROD_DS_ORDEM_INATIVO" />
+          </Key>
+          <Property Name="PROD_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="GENE_CD_CODIGO" Type="Int32" />
+          <Property Name="PROD_DS_NOME" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="PROD_DS_ORDEM" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PROD_FL_ATIVO" Type="Boolean" />
+          <Property Name="PROD_DS_ORDEM_INATIVO" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTSINC">
+          <Key>
+            <PropertyRef Name="SINC_CD_CODIGO" />
+            <PropertyRef Name="UNID_CD_CODIGO" />
+            <PropertyRef Name="PROD_CD_CODIGO" />
+            <PropertyRef Name="SINC_CD_USUA_CRIACAO" />
+          </Key>
+          <Property Name="SINC_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UNID_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="PROD_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="SINC_DT_CRIACAO" Type="DateTime" Precision="3" />
+          <Property Name="SINC_DT_GRAVACAO" Type="DateTime" Precision="3" />
+          <Property Name="SINC_DT_EXIBICAO" Type="DateTime" Precision="3" />
+          <Property Name="SINC_CD_RESPONSAVEL" Type="Int32" />
+          <Property Name="SINC_CD_SONOPLASTA" Type="Int32" />
+          <Property Name="SINC_CD_USUA_CRIACAO" Type="Int32" Nullable="false" />
+          <Property Name="SINC_DS_OBS" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SINC_DT_AP_SONOPLASTA" Type="DateTime" Precision="3" />
+          <Property Name="SINC_DT_AP_RESPONSAVEL" Type="DateTime" Precision="3" />
+          <Property Name="SINC_DT_AP_ADMIN" Type="DateTime" Precision="3" />
+          <Property Name="sinc_cd_admin" Type="Int32" />
+          <Property Name="sinc_cd_tipo_criador" Type="Int32" />
+          <Property Name="WFNC_CD_CODIGO_SONOPLASTA" Type="Int32" />
+          <Property Name="WFNC_CD_CODIGO_PRODUCAO" Type="Int32" />
+          <Property Name="WFNC_CD_CODIGO_ADMINISTRACAO" Type="Int32" />
+          <Property Name="WFNC_CD_ETAPA_ULTIMA" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="SINCTSIQD">
+          <Key>
+            <PropertyRef Name="SIQD_CD_CODIGO" />
+            <PropertyRef Name="QUAD_CD_CODIGO" />
+            <PropertyRef Name="SINC_CD_CODIGO" />
+          </Key>
+          <Property Name="SIQD_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="QUAD_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="SINC_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="EXIB_CD_CODIGO" Type="Int32" />
+          <Property Name="SIQD_DS_TITULO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="SIQD_DS_DESCRICAO" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SIQD_CD_CODIGO_REPR" Type="Int32" />
+          <Property Name="SIQD_DS_REPR" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTSLOG">
+          <Key>
+            <PropertyRef Name="SLOG_CD_CODIGO" />
+          </Key>
+          <Property Name="SLOG_CD_CODIGO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SLOG_DS_COMANDO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="SLOG_DS_DESCRICAO" Type="String" MaxLength="8000" Unicode="false" FixedLength="false" />
+          <Property Name="USUA_CD_CODIGO" Type="Int32" />
+          <Property Name="SLOG_DT_DATA" Type="DateTime" Precision="3" />
+          <Property Name="SLOG_DS_DESCRICAOINICIAL" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTTREC">
+          <Key>
+            <PropertyRef Name="TREC_CD_CODIGO" />
+          </Key>
+          <Property Name="TREC_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TREC_DS_TITULO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TREC_DS_AUTOR" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TREC_DS_INTERPRETES" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TREC_DS_ISRC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TREC_DS_TRACK_TIME" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="TREC_DS_GENERO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TREC_DS_TRACK" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TREC_NM_ARQUIVO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTTRIB">
+          <Key>
+            <PropertyRef Name="TRIB_CD_CODIGO" />
+          </Key>
+          <Property Name="TRIB_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TRIB_DS_TITULO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_DS_AUTOR" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_DS_INTERPRETES" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_CD_DISCOTECA" Type="Int32" />
+          <Property Name="TRIB_CD_CD_TRILHA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_DS_CD_TITLE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_NR_TRACK" Type="Int32" />
+          <Property Name="TRIB_CD_TRILHA" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_DS_TRACK_TIME" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_DS_TRILHA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TRIB_NM_ARQUIVO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTUNID">
+          <Key>
+            <PropertyRef Name="UNID_CD_CODIGO" />
+            <PropertyRef Name="UNID_DS_NOME" />
+          </Key>
+          <Property Name="UNID_CD_CODIGO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UNID_DS_NOME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_CD_TIPO" Type="Int32" />
+          <Property Name="UNID_DS_UF" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_DS_CIDADE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_DS_DESCRICAO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_DS_CNPJ" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_DS_LOGRADOURO" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_DS_CEP" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_DS_CONTATO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="UNID_DS_RAZAO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SINCTWFNC">
+          <Key>
+            <PropertyRef Name="WFNC_CD_CODIGO" />
+            <PropertyRef Name="SINC_CD_CODIGO" />
+          </Key>
+          <Property Name="WFNC_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="SINC_CD_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="WFNC_CD_ETAPA" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="USUA_CD_USUARIO" Type="Int32" />
+          <Property Name="WFNC_CD_WF" Type="Boolean" />
+          <Property Name="WFNC_DT_DATA" Type="DateTime" Precision="3" />
+          <Property Name="WFNC_DS_DESCRICAO" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="trilhas_vetrix">
+          <Key>
+            <PropertyRef Name="codigo_vetrix" />
+            <PropertyRef Name="exibidora" />
+            <PropertyRef Name="data_exibicao" />
+          </Key>
+          <Property Name="codigo_vetrix" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="data_roteiro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="exibidora" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="programa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="data_exibicao" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="duracao" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="trilha" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="interprete" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="isrc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="codigo_record" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="processado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="razao_social" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="aovivo" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="codigo_album" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="album" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="log_processado" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="data_processado" Type="DateTime" Precision="3" />
+          <Property Name="DtInsert" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="objectid" />
+          <Property Type="String" Name="property" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="value" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="uvalue" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="lvalue" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="version" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SINCTPREC">
+          <Key>
+            <PropertyRef Name="PREC_CD_CODIGO" />
+            <PropertyRef Name="PREC_DT_VIGENCIA_INICIO" />
+            <PropertyRef Name="PREC_DT_VIGENCIA_FIM" />
+            <PropertyRef Name="PREC_DS_ASSOCIACAO" />
+          </Key>
+          <Property Type="Int32" Name="PREC_CD_CODIGO" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="PREC_DT_VIGENCIA_INICIO" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="PREC_DT_VIGENCIA_FIM" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PREC_DS_ASSOCIACAO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ASSO_CD_CODIGO" />
+        </EntityType>
+        <EntityType Name="SINCTAUTO">
+          <Key>
+            <PropertyRef Name="AUTO_CD_CODIGO" />
+            <PropertyRef Name="USUA_CD_CRIADOR" />
+          </Key>
+          <Property Type="Int32" Name="AUTO_CD_CODIGO" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="AUTO_DT_CRIACAO" Precision="3" />
+          <Property Type="Int32" Name="USUA_CD_CRIADOR" Nullable="false" />
+          <Property Type="Int32" Name="MUSI_CD_CODIGO" />
+          <Property Type="String" Name="AUTO_DS_MIME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="AUTO_VL_PORCENTAGEM" Precision="6" Scale="2" />
+          <Property Type="Decimal" Name="AUTO_VL_VALOR" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="PREC_CD_CODIGO" />
+          <Property Type="DateTime" Name="AUTO_DT_VENCIMENTO" Precision="3" />
+          <Property Type="Int32" Name="EDIT_CD_CODIGO" />
+          <Property Type="String" Name="auto_ds_obs" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="SincOldModelStoreContainer" CdmEntityContainer="SincOldEntities">
+          <EntitySetMapping Name="SINCTASSO">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTASSO">
+              <MappingFragment StoreEntitySet="SINCTASSO">
+                <ScalarProperty Name="ASSO_CD_CODIGO" ColumnName="ASSO_CD_CODIGO" />
+                <ScalarProperty Name="ASSO_DS_NOME" ColumnName="ASSO_DS_NOME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTCLAS">
+            <EntityTypeMapping TypeName="SincOldModel.SincClassificacao">
+              <MappingFragment StoreEntitySet="SINCTCLAS">
+                <ScalarProperty Name="CLAS_CD_CODIGO" ColumnName="CLAS_CD_CODIGO" />
+                <ScalarProperty Name="CLAS_DS_DESCRICAO" ColumnName="CLAS_DS_DESCRICAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTEDIT">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTEDIT">
+              <MappingFragment StoreEntitySet="SINCTEDIT">
+                <ScalarProperty Name="EDIT_CD_CODIGO" ColumnName="EDIT_CD_CODIGO" />
+                <ScalarProperty Name="EDIT_DS_NOME" ColumnName="EDIT_DS_NOME" />
+                <ScalarProperty Name="EDIT_DS_IDENT" ColumnName="EDIT_DS_IDENT" />
+                <ScalarProperty Name="ASSO_CD_CODIGO" ColumnName="ASSO_CD_CODIGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTEXIB">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTEXIB">
+              <MappingFragment StoreEntitySet="SINCTEXIB">
+                <ScalarProperty Name="EXIB_CD_CODIGO" ColumnName="EXIB_CD_CODIGO" />
+                <ScalarProperty Name="EXIB_DS_DESCRICAO" ColumnName="EXIB_DS_DESCRICAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCGECL">
+            <EntityTypeMapping TypeName="SincOldModel.SincGeneroClassificacao">
+              <MappingFragment StoreEntitySet="SINCTGECL">
+                <ScalarProperty Name="GENE_CD_CODIGO" ColumnName="GENE_CD_CODIGO" />
+                <ScalarProperty Name="CLAS_CD_CODIGO" ColumnName="CLAS_CD_CODIGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTGENE">
+            <EntityTypeMapping TypeName="SincOldModel.SincGenero">
+              <MappingFragment StoreEntitySet="SINCTGENE">
+                <ScalarProperty Name="GENE_CD_CODIGO" ColumnName="GENE_CD_CODIGO" />
+                <ScalarProperty Name="GENE_DS_DESCRICAO" ColumnName="GENE_DS_DESCRICAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTISRC">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTISRC">
+              <MappingFragment StoreEntitySet="SINCTISRC">
+                <ScalarProperty Name="ISRC_CD_CODIGO" ColumnName="ISRC_CD_CODIGO" />
+                <ScalarProperty Name="ISRC_DS_TITULO" ColumnName="ISRC_DS_TITULO" />
+                <ScalarProperty Name="ISRC_DS_AUTORES" ColumnName="ISRC_DS_AUTORES" />
+                <ScalarProperty Name="ISRC_DS_INTERPRETES" ColumnName="ISRC_DS_INTERPRETES" />
+                <ScalarProperty Name="ISRC_DS_IFPI" ColumnName="ISRC_DS_IFPI" />
+                <ScalarProperty Name="ISRC_DS_ISWC" ColumnName="ISRC_DS_ISWC" />
+                <ScalarProperty Name="ISRC_DS_ISRC" ColumnName="ISRC_DS_ISRC" />
+                <ScalarProperty Name="ISRC_DS_GRA" ColumnName="ISRC_DS_GRA" />
+                <ScalarProperty Name="ISRC_CD_ECAD" ColumnName="ISRC_CD_ECAD" />
+                <ScalarProperty Name="ISRC_FL_ATIVA" ColumnName="ISRC_FL_ATIVA" />
+                <ScalarProperty Name="ISRC_DT_CARGA" ColumnName="ISRC_DT_CARGA" />
+                <ScalarProperty Name="ISRC_DS_TRACK_TIME" ColumnName="ISRC_DS_TRACK_TIME" />
+                <ScalarProperty Name="ISRC_FAIXA" ColumnName="ISRC_FAIXA" />
+                <ScalarProperty Name="ISRC_NM_ARQUIVO" ColumnName="ISRC_NM_ARQUIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTMUSI">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTMUSI">
+              <MappingFragment StoreEntitySet="SINCTMUSI">
+                <ScalarProperty Name="MUSI_CD_CODIGO" ColumnName="MUSI_CD_CODIGO" />
+                <ScalarProperty Name="SIQD_CD_CODIGO" ColumnName="SIQD_CD_CODIGO" />
+                <ScalarProperty Name="CLAS_CD_CODIGO" ColumnName="CLAS_CD_CODIGO" />
+                <ScalarProperty Name="ISRC_CD_CODIGO" ColumnName="ISRC_CD_CODIGO" />
+                <ScalarProperty Name="MUSI_HR_MINUTAGEM" ColumnName="MUSI_HR_MINUTAGEM" />
+                <ScalarProperty Name="MUSI_HR_TIMECODE_INICIAL" ColumnName="MUSI_HR_TIMECODE_INICIAL" />
+                <ScalarProperty Name="MUSI_HR_TIMECODE_FINAL" ColumnName="MUSI_HR_TIMECODE_FINAL" />
+                <ScalarProperty Name="MUSI_FL_BAIXA" ColumnName="MUSI_FL_BAIXA" />
+                <ScalarProperty Name="MUSI_DT_BAIXA" ColumnName="MUSI_DT_BAIXA" />
+                <ScalarProperty Name="TRIB_CD_CODIGO" ColumnName="TRIB_CD_CODIGO" />
+                <ScalarProperty Name="MUSI_PC_BAIXA" ColumnName="MUSI_PC_BAIXA" />
+                <ScalarProperty Name="TREC_CD_CODIGO" ColumnName="TREC_CD_CODIGO" />
+                <ScalarProperty Name="MUSI_FL_INCIDENTAL" ColumnName="MUSI_FL_INCIDENTAL" />
+                <ScalarProperty Name="MUSI_FL_PPOURRI" ColumnName="MUSI_FL_PPOURRI" />
+                <ScalarProperty Name="LOGIN_USUARIO" ColumnName="LOGIN_USUARIO" />
+                <ScalarProperty Name="DATA_CADASTRO" ColumnName="DATA_CADASTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTPCGE">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTPCGE">
+              <MappingFragment StoreEntitySet="SINCTPCGE">
+                <ScalarProperty Name="PCGE_CD_CODIGO" ColumnName="PCGE_CD_CODIGO" />
+                <ScalarProperty Name="PRCL_CD_CODIGO" ColumnName="PRCL_CD_CODIGO" />
+                <ScalarProperty Name="GENE_CD_CODIGO" ColumnName="GENE_CD_CODIGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTPRCL">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTPRCL">
+              <MappingFragment StoreEntitySet="SINCTPRCL">
+                <ScalarProperty Name="PRCL_CD_CODIGO" ColumnName="PRCL_CD_CODIGO" />
+                <ScalarProperty Name="PREC_CD_CODIGO" ColumnName="PREC_CD_CODIGO" />
+                <ScalarProperty Name="CLAS_CD_CODIGO" ColumnName="CLAS_CD_CODIGO" />
+                <ScalarProperty Name="PRCL_VL_VALOR" ColumnName="PRCL_VL_VALOR" />
+                <ScalarProperty Name="PRCL_DS_ABRANGENCIA" ColumnName="PRCL_DS_ABRANGENCIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTPROD">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTPROD">
+              <MappingFragment StoreEntitySet="SINCTPROD">
+                <ScalarProperty Name="PROD_CD_CODIGO" ColumnName="PROD_CD_CODIGO" />
+                <ScalarProperty Name="GENE_CD_CODIGO" ColumnName="GENE_CD_CODIGO" />
+                <ScalarProperty Name="PROD_DS_NOME" ColumnName="PROD_DS_NOME" />
+                <ScalarProperty Name="PROD_DS_ORDEM" ColumnName="PROD_DS_ORDEM" />
+                <ScalarProperty Name="PROD_FL_ATIVO" ColumnName="PROD_FL_ATIVO" />
+                <ScalarProperty Name="PROD_DS_ORDEM_INATIVO" ColumnName="PROD_DS_ORDEM_INATIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTSINC">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTSINC">
+              <MappingFragment StoreEntitySet="SINCTSINC">
+                <ScalarProperty Name="SINC_CD_CODIGO" ColumnName="SINC_CD_CODIGO" />
+                <ScalarProperty Name="UNID_CD_CODIGO" ColumnName="UNID_CD_CODIGO" />
+                <ScalarProperty Name="PROD_CD_CODIGO" ColumnName="PROD_CD_CODIGO" />
+                <ScalarProperty Name="SINC_DT_CRIACAO" ColumnName="SINC_DT_CRIACAO" />
+                <ScalarProperty Name="SINC_DT_GRAVACAO" ColumnName="SINC_DT_GRAVACAO" />
+                <ScalarProperty Name="SINC_DT_EXIBICAO" ColumnName="SINC_DT_EXIBICAO" />
+                <ScalarProperty Name="SINC_CD_RESPONSAVEL" ColumnName="SINC_CD_RESPONSAVEL" />
+                <ScalarProperty Name="SINC_CD_SONOPLASTA" ColumnName="SINC_CD_SONOPLASTA" />
+                <ScalarProperty Name="SINC_CD_USUA_CRIACAO" ColumnName="SINC_CD_USUA_CRIACAO" />
+                <ScalarProperty Name="SINC_DS_OBS" ColumnName="SINC_DS_OBS" />
+                <ScalarProperty Name="SINC_DT_AP_SONOPLASTA" ColumnName="SINC_DT_AP_SONOPLASTA" />
+                <ScalarProperty Name="SINC_DT_AP_RESPONSAVEL" ColumnName="SINC_DT_AP_RESPONSAVEL" />
+                <ScalarProperty Name="SINC_DT_AP_ADMIN" ColumnName="SINC_DT_AP_ADMIN" />
+                <ScalarProperty Name="sinc_cd_admin" ColumnName="sinc_cd_admin" />
+                <ScalarProperty Name="sinc_cd_tipo_criador" ColumnName="sinc_cd_tipo_criador" />
+                <ScalarProperty Name="WFNC_CD_CODIGO_SONOPLASTA" ColumnName="WFNC_CD_CODIGO_SONOPLASTA" />
+                <ScalarProperty Name="WFNC_CD_CODIGO_PRODUCAO" ColumnName="WFNC_CD_CODIGO_PRODUCAO" />
+                <ScalarProperty Name="WFNC_CD_CODIGO_ADMINISTRACAO" ColumnName="WFNC_CD_CODIGO_ADMINISTRACAO" />
+                <ScalarProperty Name="WFNC_CD_ETAPA_ULTIMA" ColumnName="WFNC_CD_ETAPA_ULTIMA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTSIQD">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTSIQD">
+              <MappingFragment StoreEntitySet="SINCTSIQD">
+                <ScalarProperty Name="SIQD_CD_CODIGO" ColumnName="SIQD_CD_CODIGO" />
+                <ScalarProperty Name="QUAD_CD_CODIGO" ColumnName="QUAD_CD_CODIGO" />
+                <ScalarProperty Name="SINC_CD_CODIGO" ColumnName="SINC_CD_CODIGO" />
+                <ScalarProperty Name="EXIB_CD_CODIGO" ColumnName="EXIB_CD_CODIGO" />
+                <ScalarProperty Name="SIQD_DS_TITULO" ColumnName="SIQD_DS_TITULO" />
+                <ScalarProperty Name="SIQD_DS_DESCRICAO" ColumnName="SIQD_DS_DESCRICAO" />
+                <ScalarProperty Name="SIQD_CD_CODIGO_REPR" ColumnName="SIQD_CD_CODIGO_REPR" />
+                <ScalarProperty Name="SIQD_DS_REPR" ColumnName="SIQD_DS_REPR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTSLOG">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTSLOG">
+              <MappingFragment StoreEntitySet="SINCTSLOG">
+                <ScalarProperty Name="SLOG_CD_CODIGO" ColumnName="SLOG_CD_CODIGO" />
+                <ScalarProperty Name="SLOG_DS_COMANDO" ColumnName="SLOG_DS_COMANDO" />
+                <ScalarProperty Name="SLOG_DS_DESCRICAO" ColumnName="SLOG_DS_DESCRICAO" />
+                <ScalarProperty Name="USUA_CD_CODIGO" ColumnName="USUA_CD_CODIGO" />
+                <ScalarProperty Name="SLOG_DT_DATA" ColumnName="SLOG_DT_DATA" />
+                <ScalarProperty Name="SLOG_DS_DESCRICAOINICIAL" ColumnName="SLOG_DS_DESCRICAOINICIAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTTREC">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTTREC">
+              <MappingFragment StoreEntitySet="SINCTTREC">
+                <ScalarProperty Name="TREC_CD_CODIGO" ColumnName="TREC_CD_CODIGO" />
+                <ScalarProperty Name="TREC_DS_TITULO" ColumnName="TREC_DS_TITULO" />
+                <ScalarProperty Name="TREC_DS_AUTOR" ColumnName="TREC_DS_AUTOR" />
+                <ScalarProperty Name="TREC_DS_INTERPRETES" ColumnName="TREC_DS_INTERPRETES" />
+                <ScalarProperty Name="TREC_DS_ISRC" ColumnName="TREC_DS_ISRC" />
+                <ScalarProperty Name="TREC_DS_TRACK_TIME" ColumnName="TREC_DS_TRACK_TIME" />
+                <ScalarProperty Name="TREC_DS_GENERO" ColumnName="TREC_DS_GENERO" />
+                <ScalarProperty Name="TREC_DS_TRACK" ColumnName="TREC_DS_TRACK" />
+                <ScalarProperty Name="TREC_NM_ARQUIVO" ColumnName="TREC_NM_ARQUIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTTRIB">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTTRIB">
+              <MappingFragment StoreEntitySet="SINCTTRIB">
+                <ScalarProperty Name="TRIB_CD_CODIGO" ColumnName="TRIB_CD_CODIGO" />
+                <ScalarProperty Name="TRIB_DS_TITULO" ColumnName="TRIB_DS_TITULO" />
+                <ScalarProperty Name="TRIB_DS_AUTOR" ColumnName="TRIB_DS_AUTOR" />
+                <ScalarProperty Name="TRIB_DS_INTERPRETES" ColumnName="TRIB_DS_INTERPRETES" />
+                <ScalarProperty Name="TRIB_CD_DISCOTECA" ColumnName="TRIB_CD_DISCOTECA" />
+                <ScalarProperty Name="TRIB_CD_CD_TRILHA" ColumnName="TRIB_CD_CD_TRILHA" />
+                <ScalarProperty Name="TRIB_DS_CD_TITLE" ColumnName="TRIB_DS_CD_TITLE" />
+                <ScalarProperty Name="TRIB_NR_TRACK" ColumnName="TRIB_NR_TRACK" />
+                <ScalarProperty Name="TRIB_CD_TRILHA" ColumnName="TRIB_CD_TRILHA" />
+                <ScalarProperty Name="TRIB_DS_TRACK_TIME" ColumnName="TRIB_DS_TRACK_TIME" />
+                <ScalarProperty Name="TRIB_DS_TRILHA" ColumnName="TRIB_DS_TRILHA" />
+                <ScalarProperty Name="TRIB_NM_ARQUIVO" ColumnName="TRIB_NM_ARQUIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTUNID">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTUNID">
+              <MappingFragment StoreEntitySet="SINCTUNID">
+                <ScalarProperty Name="UNID_CD_CODIGO" ColumnName="UNID_CD_CODIGO" />
+                <ScalarProperty Name="UNID_DS_NOME" ColumnName="UNID_DS_NOME" />
+                <ScalarProperty Name="UNID_CD_TIPO" ColumnName="UNID_CD_TIPO" />
+                <ScalarProperty Name="UNID_DS_UF" ColumnName="UNID_DS_UF" />
+                <ScalarProperty Name="UNID_DS_CIDADE" ColumnName="UNID_DS_CIDADE" />
+                <ScalarProperty Name="UNID_DS_DESCRICAO" ColumnName="UNID_DS_DESCRICAO" />
+                <ScalarProperty Name="UNID_DS_CNPJ" ColumnName="UNID_DS_CNPJ" />
+                <ScalarProperty Name="UNID_DS_LOGRADOURO" ColumnName="UNID_DS_LOGRADOURO" />
+                <ScalarProperty Name="UNID_DS_CEP" ColumnName="UNID_DS_CEP" />
+                <ScalarProperty Name="UNID_DS_CONTATO" ColumnName="UNID_DS_CONTATO" />
+                <ScalarProperty Name="UNID_DS_RAZAO" ColumnName="UNID_DS_RAZAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTWFNC">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTWFNC">
+              <MappingFragment StoreEntitySet="SINCTWFNC">
+                <ScalarProperty Name="WFNC_CD_CODIGO" ColumnName="WFNC_CD_CODIGO" />
+                <ScalarProperty Name="SINC_CD_CODIGO" ColumnName="SINC_CD_CODIGO" />
+                <ScalarProperty Name="WFNC_CD_ETAPA" ColumnName="WFNC_CD_ETAPA" />
+                <ScalarProperty Name="USUA_CD_USUARIO" ColumnName="USUA_CD_USUARIO" />
+                <ScalarProperty Name="WFNC_CD_WF" ColumnName="WFNC_CD_WF" />
+                <ScalarProperty Name="WFNC_DT_DATA" ColumnName="WFNC_DT_DATA" />
+                <ScalarProperty Name="WFNC_DS_DESCRICAO" ColumnName="WFNC_DS_DESCRICAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trilhas_vetrix">
+            <EntityTypeMapping TypeName="SincOldModel.trilhas_vetrix">
+              <MappingFragment StoreEntitySet="trilhas_vetrix">
+                <ScalarProperty Name="codigo_vetrix" ColumnName="codigo_vetrix" />
+                <ScalarProperty Name="data_roteiro" ColumnName="data_roteiro" />
+                <ScalarProperty Name="exibidora" ColumnName="exibidora" />
+                <ScalarProperty Name="programa" ColumnName="programa" />
+                <ScalarProperty Name="data_exibicao" ColumnName="data_exibicao" />
+                <ScalarProperty Name="duracao" ColumnName="duracao" />
+                <ScalarProperty Name="trilha" ColumnName="trilha" />
+                <ScalarProperty Name="interprete" ColumnName="interprete" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="isrc" ColumnName="isrc" />
+                <ScalarProperty Name="codigo_record" ColumnName="codigo_record" />
+                <ScalarProperty Name="processado" ColumnName="processado" />
+                <ScalarProperty Name="razao_social" ColumnName="razao_social" />
+                <ScalarProperty Name="aovivo" ColumnName="aovivo" />
+                <ScalarProperty Name="codigo_album" ColumnName="codigo_album" />
+                <ScalarProperty Name="album" ColumnName="album" />
+                <ScalarProperty Name="log_processado" ColumnName="log_processado" />
+                <ScalarProperty Name="data_processado" ColumnName="data_processado" />
+                <ScalarProperty Name="DtInsert" ColumnName="DtInsert" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dtproperties">
+            <EntityTypeMapping TypeName="SincOldModel.dtproperties">
+              <MappingFragment StoreEntitySet="dtproperties">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+                <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="property" ColumnName="property" />
+                <ScalarProperty Name="objectid" ColumnName="objectid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTPREC">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTPREC">
+              <MappingFragment StoreEntitySet="SINCTPREC">
+                <ScalarProperty Name="ASSO_CD_CODIGO" ColumnName="ASSO_CD_CODIGO" />
+                <ScalarProperty Name="PREC_DS_ASSOCIACAO" ColumnName="PREC_DS_ASSOCIACAO" />
+                <ScalarProperty Name="PREC_DT_VIGENCIA_FIM" ColumnName="PREC_DT_VIGENCIA_FIM" />
+                <ScalarProperty Name="PREC_DT_VIGENCIA_INICIO" ColumnName="PREC_DT_VIGENCIA_INICIO" />
+                <ScalarProperty Name="PREC_CD_CODIGO" ColumnName="PREC_CD_CODIGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINCTAUTO">
+            <EntityTypeMapping TypeName="SincOldModel.SINCTAUTO">
+              <MappingFragment StoreEntitySet="SINCTAUTO">
+                <ScalarProperty Name="auto_ds_obs" ColumnName="auto_ds_obs" />
+                <ScalarProperty Name="EDIT_CD_CODIGO" ColumnName="EDIT_CD_CODIGO" />
+                <ScalarProperty Name="AUTO_DT_VENCIMENTO" ColumnName="AUTO_DT_VENCIMENTO" />
+                <ScalarProperty Name="PREC_CD_CODIGO" ColumnName="PREC_CD_CODIGO" />
+                <ScalarProperty Name="AUTO_VL_VALOR" ColumnName="AUTO_VL_VALOR" />
+                <ScalarProperty Name="AUTO_VL_PORCENTAGEM" ColumnName="AUTO_VL_PORCENTAGEM" />
+                <ScalarProperty Name="AUTO_DS_MIME" ColumnName="AUTO_DS_MIME" />
+                <ScalarProperty Name="MUSI_CD_CODIGO" ColumnName="MUSI_CD_CODIGO" />
+                <ScalarProperty Name="USUA_CD_CRIADOR" ColumnName="USUA_CD_CRIADOR" />
+                <ScalarProperty Name="AUTO_DT_CRIACAO" ColumnName="AUTO_DT_CRIACAO" />
+                <ScalarProperty Name="AUTO_CD_CODIGO" ColumnName="AUTO_CD_CODIGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

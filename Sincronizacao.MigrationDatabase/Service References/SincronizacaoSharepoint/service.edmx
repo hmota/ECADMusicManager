@@ -1,0 +1,2433 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="Microsoft.SharePoint.DataService" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2007/05/edm">
+      <EntityType Name="AssociacoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="AssociacaoID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.AssociacoesItem_CriadoPor" FromRole="AssociacoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.AssociacoesItem_ModificadoPor" FromRole="AssociacoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.AssociacoesItem_Anexos" FromRole="AssociacoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="AtivosDoSiteItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.AtivosDoSiteItem_CriadoPor" FromRole="AtivosDoSiteItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.AtivosDoSiteItem_ModificadoPor" FromRole="AtivosDoSiteItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.AtivosDoSiteItem_ComCheckOutPara" FromRole="AtivosDoSiteItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="AttachmentsItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="EntitySet" />
+          <PropertyRef Name="ItemId" />
+          <PropertyRef Name="Name" />
+        </Key>
+        <Property Name="EntitySet" Type="Edm.String" Nullable="false" />
+        <Property Name="ItemId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="AutoresItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="AutorID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.AutoresItem_CriadoPor" FromRole="AutoresItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.AutoresItem_ModificadoPor" FromRole="AutoresItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.AutoresItem_Anexos" FromRole="AutoresItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="AutorizacoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Porcentagem" Type="Edm.Double" Nullable="true" />
+        <Property Name="AP" Type="Edm.Double" Nullable="true" />
+        <Property Name="Vencimento" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="AutorizacaoID" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Editora" Relationship="Microsoft.SharePoint.DataService.AutorizacoesItem_Editora" FromRole="AutorizacoesItem" ToRole="Editora" />
+        <Property Name="EditoraId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Valor" Type="Edm.Double" Nullable="true" />
+        <Property Name="SonorizacaoId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.AutorizacoesItem_CriadoPor" FromRole="AutorizacoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.AutorizacoesItem_ModificadoPor" FromRole="AutorizacoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.AutorizacoesItem_Anexos" FromRole="AutorizacoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="AvisosItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.AvisosItem_CriadoPor" FromRole="AvisosItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.AvisosItem_ModificadoPor" FromRole="AvisosItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.AvisosItem_Anexos" FromRole="AvisosItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <Property Name="Corpo" Type="Edm.String" Nullable="true" />
+        <Property Name="Vencimento" Type="Edm.DateTime" Nullable="true" />
+      </EntityType>
+      <EntityType Name="CalendárioItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.CalendárioItem_CriadoPor" FromRole="CalendárioItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.CalendárioItem_ModificadoPor" FromRole="CalendárioItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.CalendárioItem_Anexos" FromRole="CalendárioItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <Property Name="Local" Type="Edm.String" Nullable="true" />
+        <Property Name="HoraDeInício" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="HoraDeTérmino" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Descrição" Type="Edm.String" Nullable="true" />
+        <Property Name="EventoDeDiaInteiro" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Recorrência" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="EspaçoDeTrabalho" Type="Edm.Boolean" Nullable="true" />
+        <NavigationProperty Name="Participantes" Relationship="Microsoft.SharePoint.DataService.CalendárioItem_Participantes" FromRole="CalendárioItem" ToRole="Participantes" />
+        <NavigationProperty Name="Categoria" Relationship="Microsoft.SharePoint.DataService.CalendárioItem_Categoria" FromRole="CalendárioItem" ToRole="Categoria" />
+        <Property Name="CategoriaValue" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="CalendárioCategoriaValue">
+        <Key>
+          <PropertyRef Name="Value" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="ClassificacoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Descricao" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="ClassificacaoID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.ClassificacoesItem_CriadoPor" FromRole="ClassificacoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.ClassificacoesItem_ModificadoPor" FromRole="ClassificacoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.ClassificacoesItem_Anexos" FromRole="ClassificacoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DiscussãoEmEquipeItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Assunto" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_CriadoPor" FromRole="DiscussãoEmEquipeItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_ModificadoPor" FromRole="DiscussãoEmEquipeItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_Anexos" FromRole="DiscussãoEmEquipeItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <Property Name="Corpo" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor0" Relationship="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_ModificadoPor0" FromRole="DiscussãoEmEquipeItem" ToRole="ModificadoPor0" />
+        <Property Name="ModificadoPorId0" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ÚltimaAtualização" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="RemetenteDoEmail" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DocumentosItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.DocumentosItem_CriadoPor" FromRole="DocumentosItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.DocumentosItem_ModificadoPor" FromRole="DocumentosItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.DocumentosItem_ComCheckOutPara" FromRole="DocumentosItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DocumentosCompartilhadosItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem_CriadoPor" FromRole="DocumentosCompartilhadosItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem_ModificadoPor" FromRole="DocumentosCompartilhadosItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem_ComCheckOutPara" FromRole="DocumentosCompartilhadosItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="ECADItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TITULO" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="ITEM" Type="Edm.Double" Nullable="true" />
+        <Property Name="ISRC" Type="Edm.String" Nullable="true" />
+        <Property Name="AUTORES" Type="Edm.String" Nullable="true" />
+        <Property Name="INTÉRPRETES" Type="Edm.String" Nullable="true" />
+        <Property Name="CLASSIFICAÇÃO" Type="Edm.String" Nullable="true" />
+        <Property Name="MINUTAGEM" Type="Edm.String" Nullable="true" />
+        <Property Name="GRAVADOEM" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="PROGRAMA" Relationship="Microsoft.SharePoint.DataService.ECADItem_PROGRAMA" FromRole="ECADItem" ToRole="PROGRAMA" />
+        <Property Name="PROGRAMAId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.ECADItem_CriadoPor" FromRole="ECADItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.ECADItem_ModificadoPor" FromRole="ECADItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.ECADItem_Anexos" FromRole="ECADItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="EditorasItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="EditoraID" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Associacao" Relationship="Microsoft.SharePoint.DataService.EditorasItem_Associacao" FromRole="EditorasItem" ToRole="Associacao" />
+        <Property Name="AssociacaoId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="RazaoSocial" Type="Edm.String" Nullable="true" />
+        <Property Name="Endereco" Type="Edm.String" Nullable="true" />
+        <Property Name="CNPJ" Type="Edm.String" Nullable="true" />
+        <Property Name="Contato" Type="Edm.String" Nullable="true" />
+        <Property Name="Email" Type="Edm.String" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.EditorasItem_CriadoPor" FromRole="EditorasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.EditorasItem_ModificadoPor" FromRole="EditorasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.EditorasItem_Anexos" FromRole="EditorasItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="ExibicoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="ExibicaoID" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Programa" Relationship="Microsoft.SharePoint.DataService.ExibicoesItem_Programa" FromRole="ExibicoesItem" ToRole="Programa" />
+        <Property Name="ProgramaId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Unidade" Relationship="Microsoft.SharePoint.DataService.ExibicoesItem_Unidade" FromRole="ExibicoesItem" ToRole="Unidade" />
+        <Property Name="UnidadeId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.ExibicoesItem_CriadoPor" FromRole="ExibicoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.ExibicoesItem_ModificadoPor" FromRole="ExibicoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.ExibicoesItem_Anexos" FromRole="ExibicoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="FpdatasourcesItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.FpdatasourcesItem_CriadoPor" FromRole="FpdatasourcesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.FpdatasourcesItem_ModificadoPor" FromRole="FpdatasourcesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.FpdatasourcesItem_ComCheckOutPara" FromRole="FpdatasourcesItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="GaleriaDePáginasMestrasItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_CriadoPor" FromRole="GaleriaDePáginasMestrasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_ModificadoPor" FromRole="GaleriaDePáginasMestrasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_ComCheckOutPara" FromRole="GaleriaDePáginasMestrasItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <Property Name="Descrição" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="VersõesDeInterfaceDoUsuárioCompatíveis" Relationship="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_VersõesDeInterfaceDoUsuárioCompatíveis" FromRole="GaleriaDePáginasMestrasItem" ToRole="VersõesDeInterfaceDoUsuárioCompatíveis" />
+      </EntityType>
+      <EntityType Name="GaleriaDePáginasMestrasVersõesDeInterfaceDoUsuárioCompatíveisValue">
+        <Key>
+          <PropertyRef Name="Value" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="GeneroClassificacaoItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="Genero" Relationship="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_Genero" FromRole="GeneroClassificacaoItem" ToRole="Genero" />
+        <Property Name="GeneroId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Classificacao" Relationship="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_Classificacao" FromRole="GeneroClassificacaoItem" ToRole="Classificacao" />
+        <Property Name="ClassificacaoId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_CriadoPor" FromRole="GeneroClassificacaoItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_ModificadoPor" FromRole="GeneroClassificacaoItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_Anexos" FromRole="GeneroClassificacaoItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="GenerosItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Descricao" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="GeneroID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.GenerosItem_CriadoPor" FromRole="GenerosItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.GenerosItem_ModificadoPor" FromRole="GenerosItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.GenerosItem_Anexos" FromRole="GenerosItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="GravadorasItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="GravadoraID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Endereco" Type="Edm.String" Nullable="true" />
+        <Property Name="CNPJ" Type="Edm.String" Nullable="true" />
+        <Property Name="Contato" Type="Edm.String" Nullable="true" />
+        <Property Name="Email" Type="Edm.String" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.GravadorasItem_CriadoPor" FromRole="GravadorasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.GravadorasItem_ModificadoPor" FromRole="GravadorasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.GravadorasItem_Anexos" FromRole="GravadorasItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="ImagensItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="Autor" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Largura" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Altura" Type="Edm.Int32" Nullable="true" />
+        <Property Name="DataDaImagem" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Comentários" Type="Edm.String" Nullable="true" />
+        <Property Name="PalavrasChave" Type="Edm.String" Nullable="true" />
+        <Property Name="DireitosAutorais" Type="Edm.String" Nullable="true" />
+        <Property Name="VisualizarURLDeImagem" Type="Edm.String" Nullable="true" />
+        <Property Name="DuraçãoSegundos" Type="Edm.Int32" Nullable="true" />
+        <Property Name="LarguraDoQuadro" Type="Edm.Int32" Nullable="true" />
+        <Property Name="AlturaDoQuadro" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.ImagensItem_CriadoPor" FromRole="ImagensItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.ImagensItem_ModificadoPor" FromRole="ImagensItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.ImagensItem_ComCheckOutPara" FromRole="ImagensItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="ImportacoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Arquivo" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="ImportacaoID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Processado" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="ImportadoEm" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="Usuario" Relationship="Microsoft.SharePoint.DataService.ImportacoesItem_Usuario" FromRole="ImportacoesItem" ToRole="Usuario" />
+        <Property Name="UsuarioId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ImportadoVetrix" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.ImportacoesItem_CriadoPor" FromRole="ImportacoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.ImportacoesItem_ModificadoPor" FromRole="ImportacoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.ImportacoesItem_Anexos" FromRole="ImportacoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="InterpretesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="InterpreteID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.InterpretesItem_CriadoPor" FromRole="InterpretesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.InterpretesItem_ModificadoPor" FromRole="InterpretesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.InterpretesItem_Anexos" FromRole="InterpretesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="LinksItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.LinksItem_CriadoPor" FromRole="LinksItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.LinksItem_ModificadoPor" FromRole="LinksItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <Property Name="URL" Type="Edm.String" Nullable="true" />
+        <Property Name="Observações" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="ListaDeInformaçõesSobreOUsuárioItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Conta" Type="Edm.String" Nullable="true" />
+        <Property Name="EmailComercial" Type="Edm.String" Nullable="true" />
+        <Property Name="Celular" Type="Edm.String" Nullable="true" />
+        <Property Name="SobreMim" Type="Edm.String" Nullable="true" />
+        <Property Name="EndereçoSIP" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAdministradorDoSite" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Excluído" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Imagem" Type="Edm.String" Nullable="true" />
+        <Property Name="Departamento" Type="Edm.String" Nullable="true" />
+        <Property Name="Cargo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome0" Type="Edm.String" Nullable="true" />
+        <Property Name="Sobrenome" Type="Edm.String" Nullable="true" />
+        <Property Name="TelefoneComercial" Type="Edm.String" Nullable="true" />
+        <Property Name="NomeDeUsuário" Type="Edm.String" Nullable="true" />
+        <Property Name="SiteDaWeb" Type="Edm.String" Nullable="true" />
+        <Property Name="PergunteMeSobre" Type="Edm.String" Nullable="true" />
+        <Property Name="Escritório" Type="Edm.String" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem_CriadoPor" FromRole="ListaDeInformaçõesSobreOUsuárioItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem_ModificadoPor" FromRole="ListaDeInformaçõesSobreOUsuárioItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem_Anexos" FromRole="ListaDeInformaçõesSobreOUsuárioItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="MusicasItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="MusicaID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ISRC" Type="Edm.String" Nullable="true" />
+        <Property Name="ISWC" Type="Edm.String" Nullable="true" />
+        <Property Name="NomeArquivo" Type="Edm.String" Nullable="true" />
+        <Property Name="CadastradaEm" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="Autor" Relationship="Microsoft.SharePoint.DataService.MusicasItem_Autor" FromRole="MusicasItem" ToRole="Autor" />
+        <Property Name="AutorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="TipoTrilha" Relationship="Microsoft.SharePoint.DataService.MusicasItem_TipoTrilha" FromRole="MusicasItem" ToRole="TipoTrilha" />
+        <Property Name="TipoTrilhaId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Interprete" Relationship="Microsoft.SharePoint.DataService.MusicasItem_Interprete" FromRole="MusicasItem" ToRole="Interprete" />
+        <Property Name="InterpreteId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Duracao" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.MusicasItem_CriadoPor" FromRole="MusicasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.MusicasItem_ModificadoPor" FromRole="MusicasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.MusicasItem_Anexos" FromRole="MusicasItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="PáginasItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Comentários" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Contato" Relationship="Microsoft.SharePoint.DataService.PáginasItem_Contato" FromRole="PáginasItem" ToRole="Contato" />
+        <Property Name="ContatoId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="EmailParaContato" Type="Edm.String" Nullable="true" />
+        <Property Name="NomeDoContato" Type="Edm.String" Nullable="true" />
+        <Property Name="ImagemDoContato" Type="Edm.String" Nullable="true" />
+        <Property Name="LayoutDePágina" Type="Edm.String" Nullable="true" />
+        <Property Name="Autor" Type="Edm.String" Nullable="true" />
+        <Property Name="DataDoArtigo" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.PáginasItem_CriadoPor" FromRole="PáginasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.PáginasItem_ModificadoPor" FromRole="PáginasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.PáginasItem_ComCheckOutPara" FromRole="PáginasItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="PáginasDoSiteItem" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.PáginasDoSiteItem_CriadoPor" FromRole="PáginasDoSiteItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.PáginasDoSiteItem_ModificadoPor" FromRole="PáginasDoSiteItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrigemDaCópia" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeAprovação" Type="Edm.String" Nullable="true" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="ComCheckOutPara" Relationship="Microsoft.SharePoint.DataService.PáginasDoSiteItem_ComCheckOutPara" FromRole="PáginasDoSiteItem" ToRole="ComCheckOutPara" />
+        <Property Name="ComCheckOutParaId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusDeVírus" Type="Edm.String" Nullable="true" />
+        <Property Name="ÉAVersãoAtual" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <Property Name="ConteúdoWiki" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="PrecosItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Abrangencia" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="PrecoID" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Classificacao" Relationship="Microsoft.SharePoint.DataService.PrecosItem_Classificacao" FromRole="PrecosItem" ToRole="Classificacao" />
+        <Property Name="ClassificacaoId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Genero" Relationship="Microsoft.SharePoint.DataService.PrecosItem_Genero" FromRole="PrecosItem" ToRole="Genero" />
+        <Property Name="GeneroId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Associacao" Relationship="Microsoft.SharePoint.DataService.PrecosItem_Associacao" FromRole="PrecosItem" ToRole="Associacao" />
+        <Property Name="AssociacaoId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Valor" Type="Edm.Double" Nullable="true" />
+        <Property Name="Vigencia" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.PrecosItem_CriadoPor" FromRole="PrecosItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.PrecosItem_ModificadoPor" FromRole="PrecosItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.PrecosItem_Anexos" FromRole="PrecosItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="PROGRAMAItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="NOME" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="EXIBIDOEM" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.PROGRAMAItem_CriadoPor" FromRole="PROGRAMAItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.PROGRAMAItem_ModificadoPor" FromRole="PROGRAMAItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.PROGRAMAItem_Anexos" FromRole="PROGRAMAItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="ProgramasItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="ProgramaID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Ordem" Type="Edm.String" Nullable="true" />
+        <Property Name="Ativo" Type="Edm.Boolean" Nullable="true" />
+        <NavigationProperty Name="Genero" Relationship="Microsoft.SharePoint.DataService.ProgramasItem_Genero" FromRole="ProgramasItem" ToRole="Genero" />
+        <Property Name="GeneroId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.ProgramasItem_CriadoPor" FromRole="ProgramasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.ProgramasItem_ModificadoPor" FromRole="ProgramasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.ProgramasItem_Anexos" FromRole="ProgramasItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="QuadrosItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Descricao" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="QuadroID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Ativo" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.QuadrosItem_CriadoPor" FromRole="QuadrosItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.QuadrosItem_ModificadoPor" FromRole="QuadrosItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.QuadrosItem_Anexos" FromRole="QuadrosItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="RelatorioItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Programa" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Ordem" Type="Edm.Double" Nullable="true" />
+        <Property Name="Adorno" Type="Edm.Double" Nullable="true" />
+        <Property Name="Fundo" Type="Edm.Double" Nullable="true" />
+        <Property Name="Total" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Classificação" Relationship="Microsoft.SharePoint.DataService.RelatorioItem_Classificação" FromRole="RelatorioItem" ToRole="Classificação" />
+        <Property Name="ClassificaçãoValue" Type="Edm.String" Nullable="true" />
+        <Property Name="ValorTotal" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.RelatorioItem_CriadoPor" FromRole="RelatorioItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.RelatorioItem_ModificadoPor" FromRole="RelatorioItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.RelatorioItem_Anexos" FromRole="RelatorioItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="RelatorioClassificaçãoValue">
+        <Key>
+          <PropertyRef Name="Value" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="SincronizacoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Observacao" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="SincronizacaoID" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Exibicao" Relationship="Microsoft.SharePoint.DataService.SincronizacoesItem_Exibicao" FromRole="SincronizacoesItem" ToRole="Exibicao" />
+        <Property Name="ExibicaoId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Usuario" Relationship="Microsoft.SharePoint.DataService.SincronizacoesItem_Usuario" FromRole="SincronizacoesItem" ToRole="Usuario" />
+        <Property Name="UsuarioId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="PreAprovado" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Aprovado" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Aberto" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="AprovadoEm" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.SincronizacoesItem_CriadoPor" FromRole="SincronizacoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.SincronizacoesItem_ModificadoPor" FromRole="SincronizacoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.SincronizacoesItem_Anexos" FromRole="SincronizacoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="SonorizacoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="SonorizacaoID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Alterada" Type="Edm.Boolean" Nullable="true" />
+        <NavigationProperty Name="TipoExibicao" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_TipoExibicao" FromRole="SonorizacoesItem" ToRole="TipoExibicao" />
+        <Property Name="TipoExibicaoId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Quadro" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_Quadro" FromRole="SonorizacoesItem" ToRole="Quadro" />
+        <Property Name="QuadroId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Editora" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_Editora" FromRole="SonorizacoesItem" ToRole="Editora" />
+        <Property Name="EditoraId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Gravadora" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_Gravadora" FromRole="SonorizacoesItem" ToRole="Gravadora" />
+        <Property Name="GravadoraId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Musica" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_Musica" FromRole="SonorizacoesItem" ToRole="Musica" />
+        <Property Name="MusicaId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Sincronizacao" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_Sincronizacao" FromRole="SonorizacoesItem" ToRole="Sincronizacao" />
+        <Property Name="SincronizacaoId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Minutagem" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Importacao" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_Importacao" FromRole="SonorizacoesItem" ToRole="Importacao" />
+        <Property Name="ImportacaoId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_CriadoPor" FromRole="SonorizacoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_ModificadoPor" FromRole="SonorizacoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.SonorizacoesItem_Anexos" FromRole="SonorizacoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="TarefasItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.TarefasItem_CriadoPor" FromRole="TarefasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.TarefasItem_ModificadoPor" FromRole="TarefasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.TarefasItem_Anexos" FromRole="TarefasItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Predecessoras" Relationship="Microsoft.SharePoint.DataService.TarefasItem_Predecessoras" FromRole="TarefasItem" ToRole="Predecessoras" />
+        <NavigationProperty Name="Prioridade" Relationship="Microsoft.SharePoint.DataService.TarefasItem_Prioridade" FromRole="TarefasItem" ToRole="Prioridade" />
+        <Property Name="PrioridadeValue" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Status" Relationship="Microsoft.SharePoint.DataService.TarefasItem_Status" FromRole="TarefasItem" ToRole="Status" />
+        <Property Name="StatusValue" Type="Edm.String" Nullable="true" />
+        <Property Name="DeConclusão" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="AtribuídaA" Relationship="Microsoft.SharePoint.DataService.TarefasItem_AtribuídaA" FromRole="TarefasItem" ToRole="AtribuídaA" />
+        <Property Name="AtribuídaAId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="GrupoDeTarefas" Relationship="Microsoft.SharePoint.DataService.TarefasItem_GrupoDeTarefas" FromRole="TarefasItem" ToRole="GrupoDeTarefas" />
+        <Property Name="GrupoDeTarefasId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Descrição" Type="Edm.String" Nullable="true" />
+        <Property Name="DataDeInício" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="DataDeConclusão" Type="Edm.DateTime" Nullable="true" />
+      </EntityType>
+      <EntityType Name="TarefasDoFluxoDeTrabalhoItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Título" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_CriadoPor" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_ModificadoPor" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Anexos" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Predecessoras" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Predecessoras" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="Predecessoras" />
+        <NavigationProperty Name="Prioridade" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Prioridade" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="Prioridade" />
+        <Property Name="PrioridadeValue" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Status" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Status" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="Status" />
+        <Property Name="StatusValue" Type="Edm.String" Nullable="true" />
+        <Property Name="DeConclusão" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="AtribuídaA" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_AtribuídaA" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="AtribuídaA" />
+        <Property Name="AtribuídaAId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="GrupoDeTarefas" Relationship="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_GrupoDeTarefas" FromRole="TarefasDoFluxoDeTrabalhoItem" ToRole="GrupoDeTarefas" />
+        <Property Name="GrupoDeTarefasId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Descrição" Type="Edm.String" Nullable="true" />
+        <Property Name="DataDeInício" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="DataDeConclusão" Type="Edm.DateTime" Nullable="true" />
+      </EntityType>
+      <EntityType Name="TarefasDoFluxoDeTrabalhoPrioridadeValue">
+        <Key>
+          <PropertyRef Name="Value" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="TarefasDoFluxoDeTrabalhoStatusValue">
+        <Key>
+          <PropertyRef Name="Value" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="TarefasPrioridadeValue">
+        <Key>
+          <PropertyRef Name="Value" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="TarefasStatusValue">
+        <Key>
+          <PropertyRef Name="Value" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+      </EntityType>
+      <EntityType Name="TipoExibicoesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Descricao" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="TipoExibicaoID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.TipoExibicoesItem_CriadoPor" FromRole="TipoExibicoesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.TipoExibicoesItem_ModificadoPor" FromRole="TipoExibicoesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.TipoExibicoesItem_Anexos" FromRole="TipoExibicoesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="TipoTrilhasItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Descricao" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="TipoTrilhaID" Type="Edm.Double" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.TipoTrilhasItem_CriadoPor" FromRole="TipoTrilhasItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.TipoTrilhasItem_ModificadoPor" FromRole="TipoTrilhasItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.TipoTrilhasItem_Anexos" FromRole="TipoTrilhasItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="UnidadesItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Nome" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="UnidadeID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Descricao" Type="Edm.String" Nullable="true" />
+        <Property Name="RazaoSocial" Type="Edm.String" Nullable="true" />
+        <Property Name="CNPJ" Type="Edm.String" Nullable="true" />
+        <Property Name="Logradouro" Type="Edm.String" Nullable="true" />
+        <Property Name="Cidade" Type="Edm.String" Nullable="true" />
+        <Property Name="UF" Type="Edm.String" Nullable="true" />
+        <Property Name="CEP" Type="Edm.String" Nullable="true" />
+        <Property Name="Contato" Type="Edm.String" Nullable="true" />
+        <Property Name="Telefone" Type="Edm.String" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.UnidadesItem_CriadoPor" FromRole="UnidadesItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.UnidadesItem_ModificadoPor" FromRole="UnidadesItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.UnidadesItem_Anexos" FromRole="UnidadesItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="UsuariosItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Login" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="UsuarioID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Analista" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Supervisor" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Administrador" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.UsuariosItem_CriadoPor" FromRole="UsuariosItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.UsuariosItem_ModificadoPor" FromRole="UsuariosItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.UsuariosItem_Anexos" FromRole="UsuariosItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="VetrixItem">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="IDDoTipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Processado" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="VetrixID" Type="Edm.Double" Nullable="true" />
+        <Property Name="Roteiro" Type="Edm.String" Nullable="true" />
+        <Property Name="ImportadoEm" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ExibidoEm" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="Usuario" Relationship="Microsoft.SharePoint.DataService.VetrixItem_Usuario" FromRole="VetrixItem" ToRole="Usuario" />
+        <Property Name="UsuarioId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Programa" Relationship="Microsoft.SharePoint.DataService.VetrixItem_Programa" FromRole="VetrixItem" ToRole="Programa" />
+        <Property Name="ProgramaId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Unidade" Relationship="Microsoft.SharePoint.DataService.VetrixItem_Unidade" FromRole="VetrixItem" ToRole="Unidade" />
+        <Property Name="UnidadeId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TipoDeConteúdo" Type="Edm.String" Nullable="true" />
+        <Property Name="Modificado" Type="Edm.DateTime" Nullable="true" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Criado" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="CriadoPor" Relationship="Microsoft.SharePoint.DataService.VetrixItem_CriadoPor" FromRole="VetrixItem" ToRole="CriadoPor" />
+        <Property Name="CriadoPorId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="ModificadoPor" Relationship="Microsoft.SharePoint.DataService.VetrixItem_ModificadoPor" FromRole="VetrixItem" ToRole="ModificadoPor" />
+        <Property Name="ModificadoPorId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Owshiddenversion" Type="Edm.Int32" Nullable="true" ConcurrencyMode="Fixed" />
+        <Property Name="Versão" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Anexos" Relationship="Microsoft.SharePoint.DataService.VetrixItem_Anexos" FromRole="VetrixItem" ToRole="Anexos" />
+        <Property Name="Caminho" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <Association Name="AssociacoesItem_CriadoPor">
+        <End Role="AssociacoesItem" Type="Microsoft.SharePoint.DataService.AssociacoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AssociacoesItem_ModificadoPor">
+        <End Role="AssociacoesItem" Type="Microsoft.SharePoint.DataService.AssociacoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AssociacoesItem_Anexos">
+        <End Role="AssociacoesItem" Type="Microsoft.SharePoint.DataService.AssociacoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="AtivosDoSiteItem_CriadoPor">
+        <End Role="AtivosDoSiteItem" Type="Microsoft.SharePoint.DataService.AtivosDoSiteItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AtivosDoSiteItem_ModificadoPor">
+        <End Role="AtivosDoSiteItem" Type="Microsoft.SharePoint.DataService.AtivosDoSiteItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AtivosDoSiteItem_ComCheckOutPara">
+        <End Role="AtivosDoSiteItem" Type="Microsoft.SharePoint.DataService.AtivosDoSiteItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AutoresItem_CriadoPor">
+        <End Role="AutoresItem" Type="Microsoft.SharePoint.DataService.AutoresItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AutoresItem_ModificadoPor">
+        <End Role="AutoresItem" Type="Microsoft.SharePoint.DataService.AutoresItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AutoresItem_Anexos">
+        <End Role="AutoresItem" Type="Microsoft.SharePoint.DataService.AutoresItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="AutorizacoesItem_Editora">
+        <End Role="AutorizacoesItem" Type="Microsoft.SharePoint.DataService.AutorizacoesItem" Multiplicity="*" />
+        <End Role="Editora" Type="Microsoft.SharePoint.DataService.EditorasItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AutorizacoesItem_CriadoPor">
+        <End Role="AutorizacoesItem" Type="Microsoft.SharePoint.DataService.AutorizacoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AutorizacoesItem_ModificadoPor">
+        <End Role="AutorizacoesItem" Type="Microsoft.SharePoint.DataService.AutorizacoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AutorizacoesItem_Anexos">
+        <End Role="AutorizacoesItem" Type="Microsoft.SharePoint.DataService.AutorizacoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="AvisosItem_CriadoPor">
+        <End Role="AvisosItem" Type="Microsoft.SharePoint.DataService.AvisosItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AvisosItem_ModificadoPor">
+        <End Role="AvisosItem" Type="Microsoft.SharePoint.DataService.AvisosItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="AvisosItem_Anexos">
+        <End Role="AvisosItem" Type="Microsoft.SharePoint.DataService.AvisosItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="CalendárioItem_CriadoPor">
+        <End Role="CalendárioItem" Type="Microsoft.SharePoint.DataService.CalendárioItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="CalendárioItem_ModificadoPor">
+        <End Role="CalendárioItem" Type="Microsoft.SharePoint.DataService.CalendárioItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="CalendárioItem_Anexos">
+        <End Role="CalendárioItem" Type="Microsoft.SharePoint.DataService.CalendárioItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="CalendárioItem_Participantes">
+        <End Role="CalendárioItem" Type="Microsoft.SharePoint.DataService.CalendárioItem" Multiplicity="*" />
+        <End Role="Participantes" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="*" />
+      </Association>
+      <Association Name="CalendárioItem_Categoria">
+        <End Role="CalendárioItem" Type="Microsoft.SharePoint.DataService.CalendárioItem" Multiplicity="*" />
+        <End Role="Categoria" Type="Microsoft.SharePoint.DataService.CalendárioCategoriaValue" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ClassificacoesItem_CriadoPor">
+        <End Role="ClassificacoesItem" Type="Microsoft.SharePoint.DataService.ClassificacoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ClassificacoesItem_ModificadoPor">
+        <End Role="ClassificacoesItem" Type="Microsoft.SharePoint.DataService.ClassificacoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ClassificacoesItem_Anexos">
+        <End Role="ClassificacoesItem" Type="Microsoft.SharePoint.DataService.ClassificacoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="DiscussãoEmEquipeItem_CriadoPor">
+        <End Role="DiscussãoEmEquipeItem" Type="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DiscussãoEmEquipeItem_ModificadoPor">
+        <End Role="DiscussãoEmEquipeItem" Type="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DiscussãoEmEquipeItem_Anexos">
+        <End Role="DiscussãoEmEquipeItem" Type="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="DiscussãoEmEquipeItem_ModificadoPor0">
+        <End Role="DiscussãoEmEquipeItem" Type="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem" Multiplicity="*" />
+        <End Role="ModificadoPor0" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DocumentosItem_CriadoPor">
+        <End Role="DocumentosItem" Type="Microsoft.SharePoint.DataService.DocumentosItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DocumentosItem_ModificadoPor">
+        <End Role="DocumentosItem" Type="Microsoft.SharePoint.DataService.DocumentosItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DocumentosItem_ComCheckOutPara">
+        <End Role="DocumentosItem" Type="Microsoft.SharePoint.DataService.DocumentosItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DocumentosCompartilhadosItem_CriadoPor">
+        <End Role="DocumentosCompartilhadosItem" Type="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DocumentosCompartilhadosItem_ModificadoPor">
+        <End Role="DocumentosCompartilhadosItem" Type="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="DocumentosCompartilhadosItem_ComCheckOutPara">
+        <End Role="DocumentosCompartilhadosItem" Type="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ECADItem_PROGRAMA">
+        <End Role="ECADItem" Type="Microsoft.SharePoint.DataService.ECADItem" Multiplicity="*" />
+        <End Role="PROGRAMA" Type="Microsoft.SharePoint.DataService.PROGRAMAItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ECADItem_CriadoPor">
+        <End Role="ECADItem" Type="Microsoft.SharePoint.DataService.ECADItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ECADItem_ModificadoPor">
+        <End Role="ECADItem" Type="Microsoft.SharePoint.DataService.ECADItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ECADItem_Anexos">
+        <End Role="ECADItem" Type="Microsoft.SharePoint.DataService.ECADItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="EditorasItem_Associacao">
+        <End Role="EditorasItem" Type="Microsoft.SharePoint.DataService.EditorasItem" Multiplicity="*" />
+        <End Role="Associacao" Type="Microsoft.SharePoint.DataService.AssociacoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="EditorasItem_CriadoPor">
+        <End Role="EditorasItem" Type="Microsoft.SharePoint.DataService.EditorasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="EditorasItem_ModificadoPor">
+        <End Role="EditorasItem" Type="Microsoft.SharePoint.DataService.EditorasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="EditorasItem_Anexos">
+        <End Role="EditorasItem" Type="Microsoft.SharePoint.DataService.EditorasItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="ExibicoesItem_Programa">
+        <End Role="ExibicoesItem" Type="Microsoft.SharePoint.DataService.ExibicoesItem" Multiplicity="*" />
+        <End Role="Programa" Type="Microsoft.SharePoint.DataService.ProgramasItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ExibicoesItem_Unidade">
+        <End Role="ExibicoesItem" Type="Microsoft.SharePoint.DataService.ExibicoesItem" Multiplicity="*" />
+        <End Role="Unidade" Type="Microsoft.SharePoint.DataService.UnidadesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ExibicoesItem_CriadoPor">
+        <End Role="ExibicoesItem" Type="Microsoft.SharePoint.DataService.ExibicoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ExibicoesItem_ModificadoPor">
+        <End Role="ExibicoesItem" Type="Microsoft.SharePoint.DataService.ExibicoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ExibicoesItem_Anexos">
+        <End Role="ExibicoesItem" Type="Microsoft.SharePoint.DataService.ExibicoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="FpdatasourcesItem_CriadoPor">
+        <End Role="FpdatasourcesItem" Type="Microsoft.SharePoint.DataService.FpdatasourcesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="FpdatasourcesItem_ModificadoPor">
+        <End Role="FpdatasourcesItem" Type="Microsoft.SharePoint.DataService.FpdatasourcesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="FpdatasourcesItem_ComCheckOutPara">
+        <End Role="FpdatasourcesItem" Type="Microsoft.SharePoint.DataService.FpdatasourcesItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GaleriaDePáginasMestrasItem_CriadoPor">
+        <End Role="GaleriaDePáginasMestrasItem" Type="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GaleriaDePáginasMestrasItem_ModificadoPor">
+        <End Role="GaleriaDePáginasMestrasItem" Type="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GaleriaDePáginasMestrasItem_ComCheckOutPara">
+        <End Role="GaleriaDePáginasMestrasItem" Type="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GaleriaDePáginasMestrasItem_VersõesDeInterfaceDoUsuárioCompatíveis">
+        <End Role="GaleriaDePáginasMestrasItem" Type="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem" Multiplicity="*" />
+        <End Role="VersõesDeInterfaceDoUsuárioCompatíveis" Type="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasVersõesDeInterfaceDoUsuárioCompatíveisValue" Multiplicity="*" />
+      </Association>
+      <Association Name="GeneroClassificacaoItem_Genero">
+        <End Role="GeneroClassificacaoItem" Type="Microsoft.SharePoint.DataService.GeneroClassificacaoItem" Multiplicity="*" />
+        <End Role="Genero" Type="Microsoft.SharePoint.DataService.GenerosItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GeneroClassificacaoItem_Classificacao">
+        <End Role="GeneroClassificacaoItem" Type="Microsoft.SharePoint.DataService.GeneroClassificacaoItem" Multiplicity="*" />
+        <End Role="Classificacao" Type="Microsoft.SharePoint.DataService.ClassificacoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GeneroClassificacaoItem_CriadoPor">
+        <End Role="GeneroClassificacaoItem" Type="Microsoft.SharePoint.DataService.GeneroClassificacaoItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GeneroClassificacaoItem_ModificadoPor">
+        <End Role="GeneroClassificacaoItem" Type="Microsoft.SharePoint.DataService.GeneroClassificacaoItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GeneroClassificacaoItem_Anexos">
+        <End Role="GeneroClassificacaoItem" Type="Microsoft.SharePoint.DataService.GeneroClassificacaoItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="GenerosItem_CriadoPor">
+        <End Role="GenerosItem" Type="Microsoft.SharePoint.DataService.GenerosItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GenerosItem_ModificadoPor">
+        <End Role="GenerosItem" Type="Microsoft.SharePoint.DataService.GenerosItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GenerosItem_Anexos">
+        <End Role="GenerosItem" Type="Microsoft.SharePoint.DataService.GenerosItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="GravadorasItem_CriadoPor">
+        <End Role="GravadorasItem" Type="Microsoft.SharePoint.DataService.GravadorasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GravadorasItem_ModificadoPor">
+        <End Role="GravadorasItem" Type="Microsoft.SharePoint.DataService.GravadorasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="GravadorasItem_Anexos">
+        <End Role="GravadorasItem" Type="Microsoft.SharePoint.DataService.GravadorasItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="ImagensItem_CriadoPor">
+        <End Role="ImagensItem" Type="Microsoft.SharePoint.DataService.ImagensItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ImagensItem_ModificadoPor">
+        <End Role="ImagensItem" Type="Microsoft.SharePoint.DataService.ImagensItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ImagensItem_ComCheckOutPara">
+        <End Role="ImagensItem" Type="Microsoft.SharePoint.DataService.ImagensItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ImportacoesItem_Usuario">
+        <End Role="ImportacoesItem" Type="Microsoft.SharePoint.DataService.ImportacoesItem" Multiplicity="*" />
+        <End Role="Usuario" Type="Microsoft.SharePoint.DataService.UsuariosItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ImportacoesItem_CriadoPor">
+        <End Role="ImportacoesItem" Type="Microsoft.SharePoint.DataService.ImportacoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ImportacoesItem_ModificadoPor">
+        <End Role="ImportacoesItem" Type="Microsoft.SharePoint.DataService.ImportacoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ImportacoesItem_Anexos">
+        <End Role="ImportacoesItem" Type="Microsoft.SharePoint.DataService.ImportacoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="InterpretesItem_CriadoPor">
+        <End Role="InterpretesItem" Type="Microsoft.SharePoint.DataService.InterpretesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="InterpretesItem_ModificadoPor">
+        <End Role="InterpretesItem" Type="Microsoft.SharePoint.DataService.InterpretesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="InterpretesItem_Anexos">
+        <End Role="InterpretesItem" Type="Microsoft.SharePoint.DataService.InterpretesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="LinksItem_CriadoPor">
+        <End Role="LinksItem" Type="Microsoft.SharePoint.DataService.LinksItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="LinksItem_ModificadoPor">
+        <End Role="LinksItem" Type="Microsoft.SharePoint.DataService.LinksItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ListaDeInformaçõesSobreOUsuárioItem_CriadoPor">
+        <End Role="ListaDeInformaçõesSobreOUsuárioItem" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ListaDeInformaçõesSobreOUsuárioItem_ModificadoPor">
+        <End Role="ListaDeInformaçõesSobreOUsuárioItem" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ListaDeInformaçõesSobreOUsuárioItem_Anexos">
+        <End Role="ListaDeInformaçõesSobreOUsuárioItem" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="MusicasItem_Autor">
+        <End Role="MusicasItem" Type="Microsoft.SharePoint.DataService.MusicasItem" Multiplicity="*" />
+        <End Role="Autor" Type="Microsoft.SharePoint.DataService.AutoresItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="MusicasItem_TipoTrilha">
+        <End Role="MusicasItem" Type="Microsoft.SharePoint.DataService.MusicasItem" Multiplicity="*" />
+        <End Role="TipoTrilha" Type="Microsoft.SharePoint.DataService.TipoTrilhasItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="MusicasItem_Interprete">
+        <End Role="MusicasItem" Type="Microsoft.SharePoint.DataService.MusicasItem" Multiplicity="*" />
+        <End Role="Interprete" Type="Microsoft.SharePoint.DataService.InterpretesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="MusicasItem_CriadoPor">
+        <End Role="MusicasItem" Type="Microsoft.SharePoint.DataService.MusicasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="MusicasItem_ModificadoPor">
+        <End Role="MusicasItem" Type="Microsoft.SharePoint.DataService.MusicasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="MusicasItem_Anexos">
+        <End Role="MusicasItem" Type="Microsoft.SharePoint.DataService.MusicasItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="PáginasItem_Contato">
+        <End Role="PáginasItem" Type="Microsoft.SharePoint.DataService.PáginasItem" Multiplicity="*" />
+        <End Role="Contato" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PáginasItem_CriadoPor">
+        <End Role="PáginasItem" Type="Microsoft.SharePoint.DataService.PáginasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PáginasItem_ModificadoPor">
+        <End Role="PáginasItem" Type="Microsoft.SharePoint.DataService.PáginasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PáginasItem_ComCheckOutPara">
+        <End Role="PáginasItem" Type="Microsoft.SharePoint.DataService.PáginasItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PáginasDoSiteItem_CriadoPor">
+        <End Role="PáginasDoSiteItem" Type="Microsoft.SharePoint.DataService.PáginasDoSiteItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PáginasDoSiteItem_ModificadoPor">
+        <End Role="PáginasDoSiteItem" Type="Microsoft.SharePoint.DataService.PáginasDoSiteItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PáginasDoSiteItem_ComCheckOutPara">
+        <End Role="PáginasDoSiteItem" Type="Microsoft.SharePoint.DataService.PáginasDoSiteItem" Multiplicity="*" />
+        <End Role="ComCheckOutPara" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PrecosItem_Classificacao">
+        <End Role="PrecosItem" Type="Microsoft.SharePoint.DataService.PrecosItem" Multiplicity="*" />
+        <End Role="Classificacao" Type="Microsoft.SharePoint.DataService.ClassificacoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PrecosItem_Genero">
+        <End Role="PrecosItem" Type="Microsoft.SharePoint.DataService.PrecosItem" Multiplicity="*" />
+        <End Role="Genero" Type="Microsoft.SharePoint.DataService.GenerosItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PrecosItem_Associacao">
+        <End Role="PrecosItem" Type="Microsoft.SharePoint.DataService.PrecosItem" Multiplicity="*" />
+        <End Role="Associacao" Type="Microsoft.SharePoint.DataService.AssociacoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PrecosItem_CriadoPor">
+        <End Role="PrecosItem" Type="Microsoft.SharePoint.DataService.PrecosItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PrecosItem_ModificadoPor">
+        <End Role="PrecosItem" Type="Microsoft.SharePoint.DataService.PrecosItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PrecosItem_Anexos">
+        <End Role="PrecosItem" Type="Microsoft.SharePoint.DataService.PrecosItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="PROGRAMAItem_CriadoPor">
+        <End Role="PROGRAMAItem" Type="Microsoft.SharePoint.DataService.PROGRAMAItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PROGRAMAItem_ModificadoPor">
+        <End Role="PROGRAMAItem" Type="Microsoft.SharePoint.DataService.PROGRAMAItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="PROGRAMAItem_Anexos">
+        <End Role="PROGRAMAItem" Type="Microsoft.SharePoint.DataService.PROGRAMAItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="ProgramasItem_Genero">
+        <End Role="ProgramasItem" Type="Microsoft.SharePoint.DataService.ProgramasItem" Multiplicity="*" />
+        <End Role="Genero" Type="Microsoft.SharePoint.DataService.GenerosItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ProgramasItem_CriadoPor">
+        <End Role="ProgramasItem" Type="Microsoft.SharePoint.DataService.ProgramasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ProgramasItem_ModificadoPor">
+        <End Role="ProgramasItem" Type="Microsoft.SharePoint.DataService.ProgramasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ProgramasItem_Anexos">
+        <End Role="ProgramasItem" Type="Microsoft.SharePoint.DataService.ProgramasItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="QuadrosItem_CriadoPor">
+        <End Role="QuadrosItem" Type="Microsoft.SharePoint.DataService.QuadrosItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="QuadrosItem_ModificadoPor">
+        <End Role="QuadrosItem" Type="Microsoft.SharePoint.DataService.QuadrosItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="QuadrosItem_Anexos">
+        <End Role="QuadrosItem" Type="Microsoft.SharePoint.DataService.QuadrosItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="RelatorioItem_Classificação">
+        <End Role="RelatorioItem" Type="Microsoft.SharePoint.DataService.RelatorioItem" Multiplicity="*" />
+        <End Role="Classificação" Type="Microsoft.SharePoint.DataService.RelatorioClassificaçãoValue" Multiplicity="0..1" />
+      </Association>
+      <Association Name="RelatorioItem_CriadoPor">
+        <End Role="RelatorioItem" Type="Microsoft.SharePoint.DataService.RelatorioItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="RelatorioItem_ModificadoPor">
+        <End Role="RelatorioItem" Type="Microsoft.SharePoint.DataService.RelatorioItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="RelatorioItem_Anexos">
+        <End Role="RelatorioItem" Type="Microsoft.SharePoint.DataService.RelatorioItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="SincronizacoesItem_Exibicao">
+        <End Role="SincronizacoesItem" Type="Microsoft.SharePoint.DataService.SincronizacoesItem" Multiplicity="*" />
+        <End Role="Exibicao" Type="Microsoft.SharePoint.DataService.ExibicoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SincronizacoesItem_Usuario">
+        <End Role="SincronizacoesItem" Type="Microsoft.SharePoint.DataService.SincronizacoesItem" Multiplicity="*" />
+        <End Role="Usuario" Type="Microsoft.SharePoint.DataService.UsuariosItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SincronizacoesItem_CriadoPor">
+        <End Role="SincronizacoesItem" Type="Microsoft.SharePoint.DataService.SincronizacoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SincronizacoesItem_ModificadoPor">
+        <End Role="SincronizacoesItem" Type="Microsoft.SharePoint.DataService.SincronizacoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SincronizacoesItem_Anexos">
+        <End Role="SincronizacoesItem" Type="Microsoft.SharePoint.DataService.SincronizacoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="SonorizacoesItem_TipoExibicao">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="TipoExibicao" Type="Microsoft.SharePoint.DataService.TipoExibicoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_Quadro">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="Quadro" Type="Microsoft.SharePoint.DataService.QuadrosItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_Editora">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="Editora" Type="Microsoft.SharePoint.DataService.EditorasItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_Gravadora">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="Gravadora" Type="Microsoft.SharePoint.DataService.GravadorasItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_Musica">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="Musica" Type="Microsoft.SharePoint.DataService.MusicasItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_Sincronizacao">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="Sincronizacao" Type="Microsoft.SharePoint.DataService.SincronizacoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_Importacao">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="Importacao" Type="Microsoft.SharePoint.DataService.ImportacoesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_CriadoPor">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_ModificadoPor">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="SonorizacoesItem_Anexos">
+        <End Role="SonorizacoesItem" Type="Microsoft.SharePoint.DataService.SonorizacoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="TarefasItem_CriadoPor">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasItem_ModificadoPor">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasItem_Anexos">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="TarefasItem_Predecessoras">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="Predecessoras" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+      </Association>
+      <Association Name="TarefasItem_Prioridade">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="Prioridade" Type="Microsoft.SharePoint.DataService.TarefasPrioridadeValue" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasItem_Status">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="Status" Type="Microsoft.SharePoint.DataService.TarefasStatusValue" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasItem_AtribuídaA">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="AtribuídaA" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasItem_GrupoDeTarefas">
+        <End Role="TarefasItem" Type="Microsoft.SharePoint.DataService.TarefasItem" Multiplicity="*" />
+        <End Role="GrupoDeTarefas" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_CriadoPor">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_ModificadoPor">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_Anexos">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_Predecessoras">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="Predecessoras" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_Prioridade">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="Prioridade" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoPrioridadeValue" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_Status">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="Status" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoStatusValue" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_AtribuídaA">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="AtribuídaA" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TarefasDoFluxoDeTrabalhoItem_GrupoDeTarefas">
+        <End Role="TarefasDoFluxoDeTrabalhoItem" Type="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" Multiplicity="*" />
+        <End Role="GrupoDeTarefas" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TipoExibicoesItem_CriadoPor">
+        <End Role="TipoExibicoesItem" Type="Microsoft.SharePoint.DataService.TipoExibicoesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TipoExibicoesItem_ModificadoPor">
+        <End Role="TipoExibicoesItem" Type="Microsoft.SharePoint.DataService.TipoExibicoesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TipoExibicoesItem_Anexos">
+        <End Role="TipoExibicoesItem" Type="Microsoft.SharePoint.DataService.TipoExibicoesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="TipoTrilhasItem_CriadoPor">
+        <End Role="TipoTrilhasItem" Type="Microsoft.SharePoint.DataService.TipoTrilhasItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TipoTrilhasItem_ModificadoPor">
+        <End Role="TipoTrilhasItem" Type="Microsoft.SharePoint.DataService.TipoTrilhasItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="TipoTrilhasItem_Anexos">
+        <End Role="TipoTrilhasItem" Type="Microsoft.SharePoint.DataService.TipoTrilhasItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="UnidadesItem_CriadoPor">
+        <End Role="UnidadesItem" Type="Microsoft.SharePoint.DataService.UnidadesItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="UnidadesItem_ModificadoPor">
+        <End Role="UnidadesItem" Type="Microsoft.SharePoint.DataService.UnidadesItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="UnidadesItem_Anexos">
+        <End Role="UnidadesItem" Type="Microsoft.SharePoint.DataService.UnidadesItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="UsuariosItem_CriadoPor">
+        <End Role="UsuariosItem" Type="Microsoft.SharePoint.DataService.UsuariosItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="UsuariosItem_ModificadoPor">
+        <End Role="UsuariosItem" Type="Microsoft.SharePoint.DataService.UsuariosItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="UsuariosItem_Anexos">
+        <End Role="UsuariosItem" Type="Microsoft.SharePoint.DataService.UsuariosItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <Association Name="VetrixItem_Usuario">
+        <End Role="VetrixItem" Type="Microsoft.SharePoint.DataService.VetrixItem" Multiplicity="*" />
+        <End Role="Usuario" Type="Microsoft.SharePoint.DataService.UsuariosItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="VetrixItem_Programa">
+        <End Role="VetrixItem" Type="Microsoft.SharePoint.DataService.VetrixItem" Multiplicity="*" />
+        <End Role="Programa" Type="Microsoft.SharePoint.DataService.ProgramasItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="VetrixItem_Unidade">
+        <End Role="VetrixItem" Type="Microsoft.SharePoint.DataService.VetrixItem" Multiplicity="*" />
+        <End Role="Unidade" Type="Microsoft.SharePoint.DataService.UnidadesItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="VetrixItem_CriadoPor">
+        <End Role="VetrixItem" Type="Microsoft.SharePoint.DataService.VetrixItem" Multiplicity="*" />
+        <End Role="CriadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="VetrixItem_ModificadoPor">
+        <End Role="VetrixItem" Type="Microsoft.SharePoint.DataService.VetrixItem" Multiplicity="*" />
+        <End Role="ModificadoPor" Type="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" Multiplicity="0..1" />
+      </Association>
+      <Association Name="VetrixItem_Anexos">
+        <End Role="VetrixItem" Type="Microsoft.SharePoint.DataService.VetrixItem" Multiplicity="*" />
+        <End Role="Anexos" Type="Microsoft.SharePoint.DataService.AttachmentsItem" Multiplicity="*" />
+      </Association>
+      <EntityContainer Name="SincronizacaoMusicalDataContext" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Associacoes" EntityType="Microsoft.SharePoint.DataService.AssociacoesItem" />
+        <EntitySet Name="AtivosDoSite" EntityType="Microsoft.SharePoint.DataService.AtivosDoSiteItem" />
+        <EntitySet Name="Attachments" EntityType="Microsoft.SharePoint.DataService.AttachmentsItem" />
+        <EntitySet Name="Autores" EntityType="Microsoft.SharePoint.DataService.AutoresItem" />
+        <EntitySet Name="Autorizacoes" EntityType="Microsoft.SharePoint.DataService.AutorizacoesItem" />
+        <EntitySet Name="Avisos" EntityType="Microsoft.SharePoint.DataService.AvisosItem" />
+        <EntitySet Name="Calendário" EntityType="Microsoft.SharePoint.DataService.CalendárioItem" />
+        <EntitySet Name="CalendárioCategoria" EntityType="Microsoft.SharePoint.DataService.CalendárioCategoriaValue" />
+        <EntitySet Name="Classificacoes" EntityType="Microsoft.SharePoint.DataService.ClassificacoesItem" />
+        <EntitySet Name="DiscussãoEmEquipe" EntityType="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem" />
+        <EntitySet Name="Documentos" EntityType="Microsoft.SharePoint.DataService.DocumentosItem" />
+        <EntitySet Name="DocumentosCompartilhados" EntityType="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem" />
+        <EntitySet Name="ECAD" EntityType="Microsoft.SharePoint.DataService.ECADItem" />
+        <EntitySet Name="Editoras" EntityType="Microsoft.SharePoint.DataService.EditorasItem" />
+        <EntitySet Name="Exibicoes" EntityType="Microsoft.SharePoint.DataService.ExibicoesItem" />
+        <EntitySet Name="Fpdatasources" EntityType="Microsoft.SharePoint.DataService.FpdatasourcesItem" />
+        <EntitySet Name="GaleriaDePáginasMestras" EntityType="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem" />
+        <EntitySet Name="GaleriaDePáginasMestrasVersõesDeInterfaceDoUsuárioCompatíveis" EntityType="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasVersõesDeInterfaceDoUsuárioCompatíveisValue" />
+        <EntitySet Name="GeneroClassificacao" EntityType="Microsoft.SharePoint.DataService.GeneroClassificacaoItem" />
+        <EntitySet Name="Generos" EntityType="Microsoft.SharePoint.DataService.GenerosItem" />
+        <EntitySet Name="Gravadoras" EntityType="Microsoft.SharePoint.DataService.GravadorasItem" />
+        <EntitySet Name="Imagens" EntityType="Microsoft.SharePoint.DataService.ImagensItem" />
+        <EntitySet Name="Importacoes" EntityType="Microsoft.SharePoint.DataService.ImportacoesItem" />
+        <EntitySet Name="Interpretes" EntityType="Microsoft.SharePoint.DataService.InterpretesItem" />
+        <EntitySet Name="Links" EntityType="Microsoft.SharePoint.DataService.LinksItem" />
+        <EntitySet Name="ListaDeInformaçõesSobreOUsuário" EntityType="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem" />
+        <EntitySet Name="Musicas" EntityType="Microsoft.SharePoint.DataService.MusicasItem" />
+        <EntitySet Name="Páginas" EntityType="Microsoft.SharePoint.DataService.PáginasItem" />
+        <EntitySet Name="PáginasDoSite" EntityType="Microsoft.SharePoint.DataService.PáginasDoSiteItem" />
+        <EntitySet Name="Precos" EntityType="Microsoft.SharePoint.DataService.PrecosItem" />
+        <EntitySet Name="PROGRAMA" EntityType="Microsoft.SharePoint.DataService.PROGRAMAItem" />
+        <EntitySet Name="Programas" EntityType="Microsoft.SharePoint.DataService.ProgramasItem" />
+        <EntitySet Name="Quadros" EntityType="Microsoft.SharePoint.DataService.QuadrosItem" />
+        <EntitySet Name="Relatorio" EntityType="Microsoft.SharePoint.DataService.RelatorioItem" />
+        <EntitySet Name="RelatorioClassificação" EntityType="Microsoft.SharePoint.DataService.RelatorioClassificaçãoValue" />
+        <EntitySet Name="Sincronizacoes" EntityType="Microsoft.SharePoint.DataService.SincronizacoesItem" />
+        <EntitySet Name="Sonorizacoes" EntityType="Microsoft.SharePoint.DataService.SonorizacoesItem" />
+        <EntitySet Name="Tarefas" EntityType="Microsoft.SharePoint.DataService.TarefasItem" />
+        <EntitySet Name="TarefasDoFluxoDeTrabalho" EntityType="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem" />
+        <EntitySet Name="TarefasDoFluxoDeTrabalhoPrioridade" EntityType="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoPrioridadeValue" />
+        <EntitySet Name="TarefasDoFluxoDeTrabalhoStatus" EntityType="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoStatusValue" />
+        <EntitySet Name="TarefasPrioridade" EntityType="Microsoft.SharePoint.DataService.TarefasPrioridadeValue" />
+        <EntitySet Name="TarefasStatus" EntityType="Microsoft.SharePoint.DataService.TarefasStatusValue" />
+        <EntitySet Name="TipoExibicoes" EntityType="Microsoft.SharePoint.DataService.TipoExibicoesItem" />
+        <EntitySet Name="TipoTrilhas" EntityType="Microsoft.SharePoint.DataService.TipoTrilhasItem" />
+        <EntitySet Name="Unidades" EntityType="Microsoft.SharePoint.DataService.UnidadesItem" />
+        <EntitySet Name="Usuarios" EntityType="Microsoft.SharePoint.DataService.UsuariosItem" />
+        <EntitySet Name="Vetrix" EntityType="Microsoft.SharePoint.DataService.VetrixItem" />
+        <AssociationSet Name="AssociacoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.AssociacoesItem_CriadoPor">
+          <End Role="AssociacoesItem" EntitySet="Associacoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AssociacoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.AssociacoesItem_ModificadoPor">
+          <End Role="AssociacoesItem" EntitySet="Associacoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AssociacoesItem_Anexos" Association="Microsoft.SharePoint.DataService.AssociacoesItem_Anexos">
+          <End Role="AssociacoesItem" EntitySet="Associacoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="AtivosDoSiteItem_CriadoPor" Association="Microsoft.SharePoint.DataService.AtivosDoSiteItem_CriadoPor">
+          <End Role="AtivosDoSiteItem" EntitySet="AtivosDoSite" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AtivosDoSiteItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.AtivosDoSiteItem_ModificadoPor">
+          <End Role="AtivosDoSiteItem" EntitySet="AtivosDoSite" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AtivosDoSiteItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.AtivosDoSiteItem_ComCheckOutPara">
+          <End Role="AtivosDoSiteItem" EntitySet="AtivosDoSite" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AutoresItem_CriadoPor" Association="Microsoft.SharePoint.DataService.AutoresItem_CriadoPor">
+          <End Role="AutoresItem" EntitySet="Autores" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AutoresItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.AutoresItem_ModificadoPor">
+          <End Role="AutoresItem" EntitySet="Autores" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AutoresItem_Anexos" Association="Microsoft.SharePoint.DataService.AutoresItem_Anexos">
+          <End Role="AutoresItem" EntitySet="Autores" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="AutorizacoesItem_Editora" Association="Microsoft.SharePoint.DataService.AutorizacoesItem_Editora">
+          <End Role="AutorizacoesItem" EntitySet="Autorizacoes" />
+          <End Role="Editora" EntitySet="Editoras" />
+        </AssociationSet>
+        <AssociationSet Name="AutorizacoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.AutorizacoesItem_CriadoPor">
+          <End Role="AutorizacoesItem" EntitySet="Autorizacoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AutorizacoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.AutorizacoesItem_ModificadoPor">
+          <End Role="AutorizacoesItem" EntitySet="Autorizacoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AutorizacoesItem_Anexos" Association="Microsoft.SharePoint.DataService.AutorizacoesItem_Anexos">
+          <End Role="AutorizacoesItem" EntitySet="Autorizacoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="AvisosItem_CriadoPor" Association="Microsoft.SharePoint.DataService.AvisosItem_CriadoPor">
+          <End Role="AvisosItem" EntitySet="Avisos" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AvisosItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.AvisosItem_ModificadoPor">
+          <End Role="AvisosItem" EntitySet="Avisos" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="AvisosItem_Anexos" Association="Microsoft.SharePoint.DataService.AvisosItem_Anexos">
+          <End Role="AvisosItem" EntitySet="Avisos" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="CalendárioItem_CriadoPor" Association="Microsoft.SharePoint.DataService.CalendárioItem_CriadoPor">
+          <End Role="CalendárioItem" EntitySet="Calendário" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="CalendárioItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.CalendárioItem_ModificadoPor">
+          <End Role="CalendárioItem" EntitySet="Calendário" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="CalendárioItem_Anexos" Association="Microsoft.SharePoint.DataService.CalendárioItem_Anexos">
+          <End Role="CalendárioItem" EntitySet="Calendário" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="CalendárioItem_Participantes" Association="Microsoft.SharePoint.DataService.CalendárioItem_Participantes">
+          <End Role="CalendárioItem" EntitySet="Calendário" />
+          <End Role="Participantes" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="CalendárioItem_Categoria" Association="Microsoft.SharePoint.DataService.CalendárioItem_Categoria">
+          <End Role="CalendárioItem" EntitySet="Calendário" />
+          <End Role="Categoria" EntitySet="CalendárioCategoria" />
+        </AssociationSet>
+        <AssociationSet Name="ClassificacoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.ClassificacoesItem_CriadoPor">
+          <End Role="ClassificacoesItem" EntitySet="Classificacoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ClassificacoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.ClassificacoesItem_ModificadoPor">
+          <End Role="ClassificacoesItem" EntitySet="Classificacoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ClassificacoesItem_Anexos" Association="Microsoft.SharePoint.DataService.ClassificacoesItem_Anexos">
+          <End Role="ClassificacoesItem" EntitySet="Classificacoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="DiscussãoEmEquipeItem_CriadoPor" Association="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_CriadoPor">
+          <End Role="DiscussãoEmEquipeItem" EntitySet="DiscussãoEmEquipe" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DiscussãoEmEquipeItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_ModificadoPor">
+          <End Role="DiscussãoEmEquipeItem" EntitySet="DiscussãoEmEquipe" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DiscussãoEmEquipeItem_Anexos" Association="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_Anexos">
+          <End Role="DiscussãoEmEquipeItem" EntitySet="DiscussãoEmEquipe" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="DiscussãoEmEquipeItem_ModificadoPor0" Association="Microsoft.SharePoint.DataService.DiscussãoEmEquipeItem_ModificadoPor0">
+          <End Role="DiscussãoEmEquipeItem" EntitySet="DiscussãoEmEquipe" />
+          <End Role="ModificadoPor0" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosItem_CriadoPor" Association="Microsoft.SharePoint.DataService.DocumentosItem_CriadoPor">
+          <End Role="DocumentosItem" EntitySet="Documentos" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.DocumentosItem_ModificadoPor">
+          <End Role="DocumentosItem" EntitySet="Documentos" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.DocumentosItem_ComCheckOutPara">
+          <End Role="DocumentosItem" EntitySet="Documentos" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosCompartilhadosItem_CriadoPor" Association="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem_CriadoPor">
+          <End Role="DocumentosCompartilhadosItem" EntitySet="DocumentosCompartilhados" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosCompartilhadosItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem_ModificadoPor">
+          <End Role="DocumentosCompartilhadosItem" EntitySet="DocumentosCompartilhados" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="DocumentosCompartilhadosItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.DocumentosCompartilhadosItem_ComCheckOutPara">
+          <End Role="DocumentosCompartilhadosItem" EntitySet="DocumentosCompartilhados" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ECADItem_PROGRAMA" Association="Microsoft.SharePoint.DataService.ECADItem_PROGRAMA">
+          <End Role="ECADItem" EntitySet="ECAD" />
+          <End Role="PROGRAMA" EntitySet="PROGRAMA" />
+        </AssociationSet>
+        <AssociationSet Name="ECADItem_CriadoPor" Association="Microsoft.SharePoint.DataService.ECADItem_CriadoPor">
+          <End Role="ECADItem" EntitySet="ECAD" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ECADItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.ECADItem_ModificadoPor">
+          <End Role="ECADItem" EntitySet="ECAD" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ECADItem_Anexos" Association="Microsoft.SharePoint.DataService.ECADItem_Anexos">
+          <End Role="ECADItem" EntitySet="ECAD" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="EditorasItem_Associacao" Association="Microsoft.SharePoint.DataService.EditorasItem_Associacao">
+          <End Role="EditorasItem" EntitySet="Editoras" />
+          <End Role="Associacao" EntitySet="Associacoes" />
+        </AssociationSet>
+        <AssociationSet Name="EditorasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.EditorasItem_CriadoPor">
+          <End Role="EditorasItem" EntitySet="Editoras" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="EditorasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.EditorasItem_ModificadoPor">
+          <End Role="EditorasItem" EntitySet="Editoras" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="EditorasItem_Anexos" Association="Microsoft.SharePoint.DataService.EditorasItem_Anexos">
+          <End Role="EditorasItem" EntitySet="Editoras" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="ExibicoesItem_Programa" Association="Microsoft.SharePoint.DataService.ExibicoesItem_Programa">
+          <End Role="ExibicoesItem" EntitySet="Exibicoes" />
+          <End Role="Programa" EntitySet="Programas" />
+        </AssociationSet>
+        <AssociationSet Name="ExibicoesItem_Unidade" Association="Microsoft.SharePoint.DataService.ExibicoesItem_Unidade">
+          <End Role="ExibicoesItem" EntitySet="Exibicoes" />
+          <End Role="Unidade" EntitySet="Unidades" />
+        </AssociationSet>
+        <AssociationSet Name="ExibicoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.ExibicoesItem_CriadoPor">
+          <End Role="ExibicoesItem" EntitySet="Exibicoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ExibicoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.ExibicoesItem_ModificadoPor">
+          <End Role="ExibicoesItem" EntitySet="Exibicoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ExibicoesItem_Anexos" Association="Microsoft.SharePoint.DataService.ExibicoesItem_Anexos">
+          <End Role="ExibicoesItem" EntitySet="Exibicoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="FpdatasourcesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.FpdatasourcesItem_CriadoPor">
+          <End Role="FpdatasourcesItem" EntitySet="Fpdatasources" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="FpdatasourcesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.FpdatasourcesItem_ModificadoPor">
+          <End Role="FpdatasourcesItem" EntitySet="Fpdatasources" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="FpdatasourcesItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.FpdatasourcesItem_ComCheckOutPara">
+          <End Role="FpdatasourcesItem" EntitySet="Fpdatasources" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GaleriaDePáginasMestrasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_CriadoPor">
+          <End Role="GaleriaDePáginasMestrasItem" EntitySet="GaleriaDePáginasMestras" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GaleriaDePáginasMestrasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_ModificadoPor">
+          <End Role="GaleriaDePáginasMestrasItem" EntitySet="GaleriaDePáginasMestras" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GaleriaDePáginasMestrasItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_ComCheckOutPara">
+          <End Role="GaleriaDePáginasMestrasItem" EntitySet="GaleriaDePáginasMestras" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GaleriaDePáginasMestrasItem_VersõesDeInterfaceDoUsuárioCompatíveis" Association="Microsoft.SharePoint.DataService.GaleriaDePáginasMestrasItem_VersõesDeInterfaceDoUsuárioCompatíveis">
+          <End Role="GaleriaDePáginasMestrasItem" EntitySet="GaleriaDePáginasMestras" />
+          <End Role="VersõesDeInterfaceDoUsuárioCompatíveis" EntitySet="GaleriaDePáginasMestrasVersõesDeInterfaceDoUsuárioCompatíveis" />
+        </AssociationSet>
+        <AssociationSet Name="GeneroClassificacaoItem_Genero" Association="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_Genero">
+          <End Role="GeneroClassificacaoItem" EntitySet="GeneroClassificacao" />
+          <End Role="Genero" EntitySet="Generos" />
+        </AssociationSet>
+        <AssociationSet Name="GeneroClassificacaoItem_Classificacao" Association="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_Classificacao">
+          <End Role="GeneroClassificacaoItem" EntitySet="GeneroClassificacao" />
+          <End Role="Classificacao" EntitySet="Classificacoes" />
+        </AssociationSet>
+        <AssociationSet Name="GeneroClassificacaoItem_CriadoPor" Association="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_CriadoPor">
+          <End Role="GeneroClassificacaoItem" EntitySet="GeneroClassificacao" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GeneroClassificacaoItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_ModificadoPor">
+          <End Role="GeneroClassificacaoItem" EntitySet="GeneroClassificacao" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GeneroClassificacaoItem_Anexos" Association="Microsoft.SharePoint.DataService.GeneroClassificacaoItem_Anexos">
+          <End Role="GeneroClassificacaoItem" EntitySet="GeneroClassificacao" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="GenerosItem_CriadoPor" Association="Microsoft.SharePoint.DataService.GenerosItem_CriadoPor">
+          <End Role="GenerosItem" EntitySet="Generos" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GenerosItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.GenerosItem_ModificadoPor">
+          <End Role="GenerosItem" EntitySet="Generos" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GenerosItem_Anexos" Association="Microsoft.SharePoint.DataService.GenerosItem_Anexos">
+          <End Role="GenerosItem" EntitySet="Generos" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="GravadorasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.GravadorasItem_CriadoPor">
+          <End Role="GravadorasItem" EntitySet="Gravadoras" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GravadorasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.GravadorasItem_ModificadoPor">
+          <End Role="GravadorasItem" EntitySet="Gravadoras" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="GravadorasItem_Anexos" Association="Microsoft.SharePoint.DataService.GravadorasItem_Anexos">
+          <End Role="GravadorasItem" EntitySet="Gravadoras" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="ImagensItem_CriadoPor" Association="Microsoft.SharePoint.DataService.ImagensItem_CriadoPor">
+          <End Role="ImagensItem" EntitySet="Imagens" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ImagensItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.ImagensItem_ModificadoPor">
+          <End Role="ImagensItem" EntitySet="Imagens" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ImagensItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.ImagensItem_ComCheckOutPara">
+          <End Role="ImagensItem" EntitySet="Imagens" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ImportacoesItem_Usuario" Association="Microsoft.SharePoint.DataService.ImportacoesItem_Usuario">
+          <End Role="ImportacoesItem" EntitySet="Importacoes" />
+          <End Role="Usuario" EntitySet="Usuarios" />
+        </AssociationSet>
+        <AssociationSet Name="ImportacoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.ImportacoesItem_CriadoPor">
+          <End Role="ImportacoesItem" EntitySet="Importacoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ImportacoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.ImportacoesItem_ModificadoPor">
+          <End Role="ImportacoesItem" EntitySet="Importacoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ImportacoesItem_Anexos" Association="Microsoft.SharePoint.DataService.ImportacoesItem_Anexos">
+          <End Role="ImportacoesItem" EntitySet="Importacoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="InterpretesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.InterpretesItem_CriadoPor">
+          <End Role="InterpretesItem" EntitySet="Interpretes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="InterpretesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.InterpretesItem_ModificadoPor">
+          <End Role="InterpretesItem" EntitySet="Interpretes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="InterpretesItem_Anexos" Association="Microsoft.SharePoint.DataService.InterpretesItem_Anexos">
+          <End Role="InterpretesItem" EntitySet="Interpretes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="LinksItem_CriadoPor" Association="Microsoft.SharePoint.DataService.LinksItem_CriadoPor">
+          <End Role="LinksItem" EntitySet="Links" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="LinksItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.LinksItem_ModificadoPor">
+          <End Role="LinksItem" EntitySet="Links" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ListaDeInformaçõesSobreOUsuárioItem_CriadoPor" Association="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem_CriadoPor">
+          <End Role="ListaDeInformaçõesSobreOUsuárioItem" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ListaDeInformaçõesSobreOUsuárioItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem_ModificadoPor">
+          <End Role="ListaDeInformaçõesSobreOUsuárioItem" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ListaDeInformaçõesSobreOUsuárioItem_Anexos" Association="Microsoft.SharePoint.DataService.ListaDeInformaçõesSobreOUsuárioItem_Anexos">
+          <End Role="ListaDeInformaçõesSobreOUsuárioItem" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="MusicasItem_Autor" Association="Microsoft.SharePoint.DataService.MusicasItem_Autor">
+          <End Role="MusicasItem" EntitySet="Musicas" />
+          <End Role="Autor" EntitySet="Autores" />
+        </AssociationSet>
+        <AssociationSet Name="MusicasItem_TipoTrilha" Association="Microsoft.SharePoint.DataService.MusicasItem_TipoTrilha">
+          <End Role="MusicasItem" EntitySet="Musicas" />
+          <End Role="TipoTrilha" EntitySet="TipoTrilhas" />
+        </AssociationSet>
+        <AssociationSet Name="MusicasItem_Interprete" Association="Microsoft.SharePoint.DataService.MusicasItem_Interprete">
+          <End Role="MusicasItem" EntitySet="Musicas" />
+          <End Role="Interprete" EntitySet="Interpretes" />
+        </AssociationSet>
+        <AssociationSet Name="MusicasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.MusicasItem_CriadoPor">
+          <End Role="MusicasItem" EntitySet="Musicas" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="MusicasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.MusicasItem_ModificadoPor">
+          <End Role="MusicasItem" EntitySet="Musicas" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="MusicasItem_Anexos" Association="Microsoft.SharePoint.DataService.MusicasItem_Anexos">
+          <End Role="MusicasItem" EntitySet="Musicas" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="PáginasItem_Contato" Association="Microsoft.SharePoint.DataService.PáginasItem_Contato">
+          <End Role="PáginasItem" EntitySet="Páginas" />
+          <End Role="Contato" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PáginasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.PáginasItem_CriadoPor">
+          <End Role="PáginasItem" EntitySet="Páginas" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PáginasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.PáginasItem_ModificadoPor">
+          <End Role="PáginasItem" EntitySet="Páginas" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PáginasItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.PáginasItem_ComCheckOutPara">
+          <End Role="PáginasItem" EntitySet="Páginas" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PáginasDoSiteItem_CriadoPor" Association="Microsoft.SharePoint.DataService.PáginasDoSiteItem_CriadoPor">
+          <End Role="PáginasDoSiteItem" EntitySet="PáginasDoSite" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PáginasDoSiteItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.PáginasDoSiteItem_ModificadoPor">
+          <End Role="PáginasDoSiteItem" EntitySet="PáginasDoSite" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PáginasDoSiteItem_ComCheckOutPara" Association="Microsoft.SharePoint.DataService.PáginasDoSiteItem_ComCheckOutPara">
+          <End Role="PáginasDoSiteItem" EntitySet="PáginasDoSite" />
+          <End Role="ComCheckOutPara" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PrecosItem_Classificacao" Association="Microsoft.SharePoint.DataService.PrecosItem_Classificacao">
+          <End Role="PrecosItem" EntitySet="Precos" />
+          <End Role="Classificacao" EntitySet="Classificacoes" />
+        </AssociationSet>
+        <AssociationSet Name="PrecosItem_Genero" Association="Microsoft.SharePoint.DataService.PrecosItem_Genero">
+          <End Role="PrecosItem" EntitySet="Precos" />
+          <End Role="Genero" EntitySet="Generos" />
+        </AssociationSet>
+        <AssociationSet Name="PrecosItem_Associacao" Association="Microsoft.SharePoint.DataService.PrecosItem_Associacao">
+          <End Role="PrecosItem" EntitySet="Precos" />
+          <End Role="Associacao" EntitySet="Associacoes" />
+        </AssociationSet>
+        <AssociationSet Name="PrecosItem_CriadoPor" Association="Microsoft.SharePoint.DataService.PrecosItem_CriadoPor">
+          <End Role="PrecosItem" EntitySet="Precos" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PrecosItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.PrecosItem_ModificadoPor">
+          <End Role="PrecosItem" EntitySet="Precos" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PrecosItem_Anexos" Association="Microsoft.SharePoint.DataService.PrecosItem_Anexos">
+          <End Role="PrecosItem" EntitySet="Precos" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="PROGRAMAItem_CriadoPor" Association="Microsoft.SharePoint.DataService.PROGRAMAItem_CriadoPor">
+          <End Role="PROGRAMAItem" EntitySet="PROGRAMA" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PROGRAMAItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.PROGRAMAItem_ModificadoPor">
+          <End Role="PROGRAMAItem" EntitySet="PROGRAMA" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="PROGRAMAItem_Anexos" Association="Microsoft.SharePoint.DataService.PROGRAMAItem_Anexos">
+          <End Role="PROGRAMAItem" EntitySet="PROGRAMA" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="ProgramasItem_Genero" Association="Microsoft.SharePoint.DataService.ProgramasItem_Genero">
+          <End Role="ProgramasItem" EntitySet="Programas" />
+          <End Role="Genero" EntitySet="Generos" />
+        </AssociationSet>
+        <AssociationSet Name="ProgramasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.ProgramasItem_CriadoPor">
+          <End Role="ProgramasItem" EntitySet="Programas" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ProgramasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.ProgramasItem_ModificadoPor">
+          <End Role="ProgramasItem" EntitySet="Programas" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="ProgramasItem_Anexos" Association="Microsoft.SharePoint.DataService.ProgramasItem_Anexos">
+          <End Role="ProgramasItem" EntitySet="Programas" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="QuadrosItem_CriadoPor" Association="Microsoft.SharePoint.DataService.QuadrosItem_CriadoPor">
+          <End Role="QuadrosItem" EntitySet="Quadros" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="QuadrosItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.QuadrosItem_ModificadoPor">
+          <End Role="QuadrosItem" EntitySet="Quadros" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="QuadrosItem_Anexos" Association="Microsoft.SharePoint.DataService.QuadrosItem_Anexos">
+          <End Role="QuadrosItem" EntitySet="Quadros" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="RelatorioItem_Classificação" Association="Microsoft.SharePoint.DataService.RelatorioItem_Classificação">
+          <End Role="RelatorioItem" EntitySet="Relatorio" />
+          <End Role="Classificação" EntitySet="RelatorioClassificação" />
+        </AssociationSet>
+        <AssociationSet Name="RelatorioItem_CriadoPor" Association="Microsoft.SharePoint.DataService.RelatorioItem_CriadoPor">
+          <End Role="RelatorioItem" EntitySet="Relatorio" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="RelatorioItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.RelatorioItem_ModificadoPor">
+          <End Role="RelatorioItem" EntitySet="Relatorio" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="RelatorioItem_Anexos" Association="Microsoft.SharePoint.DataService.RelatorioItem_Anexos">
+          <End Role="RelatorioItem" EntitySet="Relatorio" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="SincronizacoesItem_Exibicao" Association="Microsoft.SharePoint.DataService.SincronizacoesItem_Exibicao">
+          <End Role="SincronizacoesItem" EntitySet="Sincronizacoes" />
+          <End Role="Exibicao" EntitySet="Exibicoes" />
+        </AssociationSet>
+        <AssociationSet Name="SincronizacoesItem_Usuario" Association="Microsoft.SharePoint.DataService.SincronizacoesItem_Usuario">
+          <End Role="SincronizacoesItem" EntitySet="Sincronizacoes" />
+          <End Role="Usuario" EntitySet="Usuarios" />
+        </AssociationSet>
+        <AssociationSet Name="SincronizacoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.SincronizacoesItem_CriadoPor">
+          <End Role="SincronizacoesItem" EntitySet="Sincronizacoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="SincronizacoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.SincronizacoesItem_ModificadoPor">
+          <End Role="SincronizacoesItem" EntitySet="Sincronizacoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="SincronizacoesItem_Anexos" Association="Microsoft.SharePoint.DataService.SincronizacoesItem_Anexos">
+          <End Role="SincronizacoesItem" EntitySet="Sincronizacoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_TipoExibicao" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_TipoExibicao">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="TipoExibicao" EntitySet="TipoExibicoes" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_Quadro" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_Quadro">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="Quadro" EntitySet="Quadros" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_Editora" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_Editora">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="Editora" EntitySet="Editoras" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_Gravadora" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_Gravadora">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="Gravadora" EntitySet="Gravadoras" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_Musica" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_Musica">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="Musica" EntitySet="Musicas" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_Sincronizacao" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_Sincronizacao">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="Sincronizacao" EntitySet="Sincronizacoes" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_Importacao" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_Importacao">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="Importacao" EntitySet="Importacoes" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_CriadoPor">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_ModificadoPor">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="SonorizacoesItem_Anexos" Association="Microsoft.SharePoint.DataService.SonorizacoesItem_Anexos">
+          <End Role="SonorizacoesItem" EntitySet="Sonorizacoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.TarefasItem_CriadoPor">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.TarefasItem_ModificadoPor">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_Anexos" Association="Microsoft.SharePoint.DataService.TarefasItem_Anexos">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_Predecessoras" Association="Microsoft.SharePoint.DataService.TarefasItem_Predecessoras">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="Predecessoras" EntitySet="Tarefas" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_Prioridade" Association="Microsoft.SharePoint.DataService.TarefasItem_Prioridade">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="Prioridade" EntitySet="TarefasPrioridade" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_Status" Association="Microsoft.SharePoint.DataService.TarefasItem_Status">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="Status" EntitySet="TarefasStatus" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_AtribuídaA" Association="Microsoft.SharePoint.DataService.TarefasItem_AtribuídaA">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="AtribuídaA" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasItem_GrupoDeTarefas" Association="Microsoft.SharePoint.DataService.TarefasItem_GrupoDeTarefas">
+          <End Role="TarefasItem" EntitySet="Tarefas" />
+          <End Role="GrupoDeTarefas" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_CriadoPor" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_CriadoPor">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_ModificadoPor">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_Anexos" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Anexos">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_Predecessoras" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Predecessoras">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="Predecessoras" EntitySet="TarefasDoFluxoDeTrabalho" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_Prioridade" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Prioridade">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="Prioridade" EntitySet="TarefasDoFluxoDeTrabalhoPrioridade" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_Status" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_Status">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="Status" EntitySet="TarefasDoFluxoDeTrabalhoStatus" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_AtribuídaA" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_AtribuídaA">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="AtribuídaA" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TarefasDoFluxoDeTrabalhoItem_GrupoDeTarefas" Association="Microsoft.SharePoint.DataService.TarefasDoFluxoDeTrabalhoItem_GrupoDeTarefas">
+          <End Role="TarefasDoFluxoDeTrabalhoItem" EntitySet="TarefasDoFluxoDeTrabalho" />
+          <End Role="GrupoDeTarefas" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TipoExibicoesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.TipoExibicoesItem_CriadoPor">
+          <End Role="TipoExibicoesItem" EntitySet="TipoExibicoes" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TipoExibicoesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.TipoExibicoesItem_ModificadoPor">
+          <End Role="TipoExibicoesItem" EntitySet="TipoExibicoes" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TipoExibicoesItem_Anexos" Association="Microsoft.SharePoint.DataService.TipoExibicoesItem_Anexos">
+          <End Role="TipoExibicoesItem" EntitySet="TipoExibicoes" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="TipoTrilhasItem_CriadoPor" Association="Microsoft.SharePoint.DataService.TipoTrilhasItem_CriadoPor">
+          <End Role="TipoTrilhasItem" EntitySet="TipoTrilhas" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TipoTrilhasItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.TipoTrilhasItem_ModificadoPor">
+          <End Role="TipoTrilhasItem" EntitySet="TipoTrilhas" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="TipoTrilhasItem_Anexos" Association="Microsoft.SharePoint.DataService.TipoTrilhasItem_Anexos">
+          <End Role="TipoTrilhasItem" EntitySet="TipoTrilhas" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="UnidadesItem_CriadoPor" Association="Microsoft.SharePoint.DataService.UnidadesItem_CriadoPor">
+          <End Role="UnidadesItem" EntitySet="Unidades" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="UnidadesItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.UnidadesItem_ModificadoPor">
+          <End Role="UnidadesItem" EntitySet="Unidades" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="UnidadesItem_Anexos" Association="Microsoft.SharePoint.DataService.UnidadesItem_Anexos">
+          <End Role="UnidadesItem" EntitySet="Unidades" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="UsuariosItem_CriadoPor" Association="Microsoft.SharePoint.DataService.UsuariosItem_CriadoPor">
+          <End Role="UsuariosItem" EntitySet="Usuarios" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="UsuariosItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.UsuariosItem_ModificadoPor">
+          <End Role="UsuariosItem" EntitySet="Usuarios" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="UsuariosItem_Anexos" Association="Microsoft.SharePoint.DataService.UsuariosItem_Anexos">
+          <End Role="UsuariosItem" EntitySet="Usuarios" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <AssociationSet Name="VetrixItem_Usuario" Association="Microsoft.SharePoint.DataService.VetrixItem_Usuario">
+          <End Role="VetrixItem" EntitySet="Vetrix" />
+          <End Role="Usuario" EntitySet="Usuarios" />
+        </AssociationSet>
+        <AssociationSet Name="VetrixItem_Programa" Association="Microsoft.SharePoint.DataService.VetrixItem_Programa">
+          <End Role="VetrixItem" EntitySet="Vetrix" />
+          <End Role="Programa" EntitySet="Programas" />
+        </AssociationSet>
+        <AssociationSet Name="VetrixItem_Unidade" Association="Microsoft.SharePoint.DataService.VetrixItem_Unidade">
+          <End Role="VetrixItem" EntitySet="Vetrix" />
+          <End Role="Unidade" EntitySet="Unidades" />
+        </AssociationSet>
+        <AssociationSet Name="VetrixItem_CriadoPor" Association="Microsoft.SharePoint.DataService.VetrixItem_CriadoPor">
+          <End Role="VetrixItem" EntitySet="Vetrix" />
+          <End Role="CriadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="VetrixItem_ModificadoPor" Association="Microsoft.SharePoint.DataService.VetrixItem_ModificadoPor">
+          <End Role="VetrixItem" EntitySet="Vetrix" />
+          <End Role="ModificadoPor" EntitySet="ListaDeInformaçõesSobreOUsuário" />
+        </AssociationSet>
+        <AssociationSet Name="VetrixItem_Anexos" Association="Microsoft.SharePoint.DataService.VetrixItem_Anexos">
+          <End Role="VetrixItem" EntitySet="Vetrix" />
+          <End Role="Anexos" EntitySet="Attachments" />
+        </AssociationSet>
+        <FunctionImport Name="ConvertListTitleToEntitySetName" ReturnType="Edm.String" m:HttpMethod="GET">
+          <Parameter Name="listTitle" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
